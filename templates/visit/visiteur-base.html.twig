@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Immo!{% endblock %}</title>
+    <meta name="description" content="Free Bootstrap Theme by uicookies.com">
+    <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
+    {% block stylesheets %}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="visit/css/styles-merged.css">
+    <link rel="stylesheet" href="visit/css/style.css">
+    <link rel="stylesheet" href="visit/css/custom.css">
+    {% endblock %}
+
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="probootstrap-loader"></div>
+
+  <header role="banner" class="probootstrap-header">
+    <div class="container">
+       <a href="index.html" class="probootstrap-logo">E--IMMO<span>.</span></a>
+        
+        <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
+        <div class="mobile-menu-overlay"></div>
+
+        <nav role="navigation" class="probootstrap-nav hidden-xs">
+          <ul class="probootstrap-main-nav">
+            <li class="active" ><a href="index.html">Acceuil</a></li>
+            <li><a href="properties.html">A vendre</a></li>
+            <li><a href="properties.html">A louer</a></li>
+            <span class="pull-right">
+              <li><a href="agents.html">Soumettre un bien </a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </span>
+
+          </ul>
+          <div class="extra-text visible-xs"> 
+            <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
+            <h5>Addresse</h5>
+            <p>Ste Rite rue a proximité de l'église</p>
+            <h5>Suivez nous</h5>
+            <ul class="social-buttons">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-facebook2"></i></a></li>
+              <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+  </header>
+    {% block content %}
+    {% endblock %}
+  <footer class="probootstrap-footer probootstrap-bg">
+    <div class="container">
+      <div class="row mb60">
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">A propos de nous</h4>
+            <p>L'immobilier n'a jamais aussi été a portée de main. Chez nous tous le monde fait tout aussi facilement que cela n'a jamais été grace a notre platforme.</p>
+            <p><a href="#">En savoir plus</a></p>
+          </div> 
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget probootstrap-link-wrap">
+            <h4 class="heading">Liens utiles</h4>
+            <ul class="stack-link">
+              <li><a href="#">Parcelle a vendre</a></li>
+              <li><a href="#">Parcelle a louer</a></li>
+              <li><a href="#">Maison a vendre</a></li>
+              <li><a href="#">Maison a louer</a></li>
+              <li><a href="#">Soumission de bien</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget">
+            <h4 class="heading">Villes populaires</h4>
+            <ul class="stack-link">
+              <li><a href="#">Abomey-Calavi<small>(320 propriétés)</small></a></li>
+              <li><a href="#">Cotonou<small>(294 propriétés)</small></a></li>
+              <li><a href="#">Porto-novo<small>(300 propriétés)</small></a></li>
+              <li><a href="#">Parakou<small>(268 propriétés)</small></a></li>
+              <li><a href="#">Ouidah<small>(342 propriétés)</small></a></li>
+            </ul>
+          </div> 
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-footer-widget probootstrap-link-wrap">
+            <h4 class="heading">Souscrivez</h4>
+            <p>Recevez par e-mail vos préférences immobilières</p>
+            <form action="#">
+              <div class="form-field">
+                <input type="text" class="form-control" placeholder="Votre mail">
+                <button class="btn btn-subscribe">Envoyer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row copyright">
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget">
+            <p>&copy; 2017 <a href="https://uicookies.com/">Enock Akpaki et Taïrou Baïssou</a>.</a></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="probootstrap-footer-widget right">
+            <ul class="probootstrap-footer-social">
+              <li><a href="#"><i class="icon-twitter"></i></a></li>
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
+  </div>
+  
+  {% block script %}
+    <script src="visit/js/scripts.min.js"></script>
+    <script src="visit/js/main.min.js"></script>
+    <script src="visit/js/custom.js"></script>
+  {% endblock %}
+
+  </body>
+</html>
