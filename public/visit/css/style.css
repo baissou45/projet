@@ -2522,3 +2522,12 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   outline: none;
   background: rgba(0, 0, 0, 0.9);
 }
+
+.section-properties{
+  margin-top: -150px;
+}
+@media screen and (max-width: 768px) {
+  .section-properties {
+    margin-top: -0px;
+  }
+}
