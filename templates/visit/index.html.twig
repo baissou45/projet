@@ -1,4 +1,523 @@
-{% extends 'admin-base.html.twig' %}
+{% extends 'visiteur-base.html.twig' %}
+{% block title %}Acceuil - {{ parent () }}{% endblock %}
 {% block content %}
+	<section class="probootstrap-slider flexslider">
+    <div class="probootstrap-wrap-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
 
+            <div class="probootstrap-home-search probootstrap-animate">
+              <form action="" method="post">
+                <h2 class="heading">Rechercher votre nouvel habitat ici.</h2>
+                <div class="probootstrap-field-group">
+                  <div class="probootstrap-fields">
+                    
+                    <div class="search-field">
+                      <i class="icon-location2"></i>
+                      <input type="text" class="form-control" placeholder="Entrer une adresse">
+                    </div>
+                    <div class="search-category">
+                      <i class="icon-chevron-down"></i>
+                      <select name="#" id="" class="form-control">
+                        <option value="">A vendre</option>
+                        <option value="">A louer</option>
+                      </select>
+                    </div>
+                    <div class="search-category">
+                      <i class="icon-chevron-down"></i>
+                      <select name="#" id="" class="form-control">
+                        <option value="">Parcelle</option>
+                        <option value="">Maison</option>
+                        <option value="">Boutique</option>
+                        <option value="">Immeuble	</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <button class="btn btn-success" type="submit"><i class="icon-magnifying-glass t2"></i> Rechercher</button>
+                </div>
+              </form>
+              <p class="mb0 text-left"><small>Etes vous propriétaire d'une maison, d'une parcelle a vendre ou a louer ? <a href="https://uicookies.com/license">Soumetter nous votre bien</a></small> </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="slides">
+    <li style="background-image: url(visit/img/architecture.jpg);" class="overlay"></li>
+    <li style="background-image: url(visit/img/architecture-1836070.jpg);" class="overlay"></li>
+    <li style="background-image: url(visit/img/bg.jpg);" class="overlay"></li>
+    <li style="background-image: url(visit/img/bg-2.jpg);" class="overlay"></li>
+    </ul>
+  </section>
+  <!-- END: slider  -->
+
+  <section class="probootstrap-section probootstrap-section-lighter">
+    <div class="container">
+      <div class="row heading">
+        <h2 class="mt0 mb50 text-center">Et si c'étais ce que vous cherchiez</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <div class="probootstrap-card probootstrap-listing">
+            <div class="probootstrap-card-media">
+              <img src="visit/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+              <div class="probootstrap-listing-location">
+                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+              </div>
+              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+            </div>
+            <div class="probootstrap-card-extra">
+              <ul>
+                <li>
+                  Superficie
+                  <span>2400 m2</span>
+                </li>
+                <li>
+                  Salon
+                  <span>2</span>
+                </li>
+                <li>
+                  Chambres
+                  <span>3</span>
+                </li>
+                <li>
+                  Garages
+                  <span>1</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- END listing -->
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="probootstrap-card probootstrap-listing">
+            <div class="probootstrap-card-media">
+              <img src="visit/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+              <div class="probootstrap-listing-location">
+                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+              </div>
+              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+            </div>
+            <div class="probootstrap-card-extra">
+              <ul>
+                <li>
+                  Superficie
+                  <span>2400 m2</span>
+                </li>
+                <li>
+                  Salon
+                  <span>2</span>
+                </li>
+                <li>
+                  Chambres
+                  <span>3</span>
+                </li>
+                <li>
+                  Garages
+                  <span>1</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- END listing -->
+        </div>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-md-4 col-sm-6">
+          <div class="probootstrap-card probootstrap-listing">
+            <div class="probootstrap-card-media">
+              <img src="visit/img/architecture-1836070.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading"><a href="#">1 Chambre 1 Salon</a></h2>
+              <div class="probootstrap-listing-location">
+                <i class="icon-location2"></i> <span>Cotonou en face de la grande mosquée</span>
+              </div>
+              <div class="probootstrap-listing-category for-rent"><span>a louer</span></div>
+              <div class="probootstrap-listing-price"><strong>60 000  F CFA</strong> / mois</div>
+            </div>
+            <div class="probootstrap-card-extra">
+              <ul>
+                <li>
+                  Sanitaire
+                  <span>Oui</span>
+                </li>
+                <li>
+                  Salon
+                  <span>1</span>
+                </li>
+                <li>
+                  Chambres
+                  <span>1</span>
+                </li>
+                <li>
+                  Co-location
+                  <span>Non</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- END listing -->
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <<div class="probootstrap-card probootstrap-listing">
+            <div class="probootstrap-card-media">
+              <img src="visit/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+              <div class="probootstrap-listing-location">
+                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+              </div>
+              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+            </div>
+            <div class="probootstrap-card-extra">
+              <ul>
+                <li>
+                  Superficie
+                  <span>2400 m2</span>
+                </li>
+                <li>
+                  Salon
+                  <span>2</span>
+                </li>
+                <li>
+                  Chambres
+                  <span>3</span>
+                </li>
+                <li>
+                  Garages
+                  <span>1</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- END listing -->
+        </div>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-md-4 col-sm-6">
+          <div class="probootstrap-card probootstrap-listing">
+            <div class="probootstrap-card-media">
+              <img src="visit/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+              <div class="probootstrap-listing-location">
+                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+              </div>
+              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+            </div>
+            <div class="probootstrap-card-extra">
+              <ul>
+                <li>
+                  Superficie
+                  <span>2400 m2</span>
+                </li>
+                <li>
+                  Salon
+                  <span>2</span>
+                </li>
+                <li>
+                  Chambres
+                  <span>3</span>
+                </li>
+                <li>
+                  Garages
+                  <span>1</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- END listing -->
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="probootstrap-card probootstrap-listing">
+            <div class="probootstrap-card-media">
+              <img src="visit/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+              <div class="probootstrap-listing-location">
+                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+              </div>
+              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+            </div>
+            <div class="probootstrap-card-extra">
+              <ul>
+                <li>
+                  Superficie
+                  <span>2400 m2</span>
+                </li>
+                <li>
+                  Salon
+                  <span>2</span>
+                </li>
+                <li>
+                  Chambres
+                  <span>3</span>
+                </li>
+                <li>
+                  Garages
+                  <span>1</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- END listing -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-section probootstrap-bg" style="background-image: url(visit/img/architecture.jpg);">
+    <div class="container text-center probootstrap-animate" data-animate-effect="fadeIn">
+      <h2 class="heading">Les meilleurs biens aux meilleurs prix</h2>
+      <p class="sub-heading">Consultez notre catalogue de biens pour y voir tout ce que vous cherchez</p>
+      <p><a href="#" class="btn btn-success mb10">Voir le catalogue complet</a></p>
+    </div>
+  </section>
+  <!-- END: section -->
+
+  <section class="probootstrap-section">
+    <div class="container">
+      <div class="row heading">
+        <h2 class="mt0 mb50 text-center">Que faisons nous ?</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+          <div class="service text-center">
+            <div class="icon"><i class="icon-list2"></i></div>
+            <h2 class="heading">Liste de biens</h2>
+            <p>Retrouver sur notre platforme tous les biens immobiliers ou qu'ils soient et quel qu'ils soient</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+          <div class="service text-center">
+            <div class="icon"><i class="icon-power-cord"></i></div>
+            <h2 class="heading">Gestion de biens</h2>
+            <p>Vous etes propriétaires et vous voulez soumettre vos biens a la vente ou a la location ? Vous etes au bon endroit.</p>
+          </div>
+        </div>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+          <div class="service text-center">
+            <div class="icon"><i class="icon-price-tag2"></i></div>
+            <h2 class="heading">Location</h2>
+            <p>Immeubles, batiments, maisons, parcelles. Tout peut etre louer chez nous. Il suffit de demander.</p>
+          </div>
+        </div>
+        <div class="clearfix visible-lg-block visible-md-block"></div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+          <div class="service text-center">
+            <div class="icon"><i class="icon-direction"></i></div>
+            <h2 class="heading">Vente</h2>
+            <p>Vous voulez a acheter une parcelle, une maison bref c'est ici que vous trouvez ce que vous cherchez.</p>
+          </div>
+        </div>
+        <div class="clearfix visible-sm-block"></div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+          <div class="service text-center">
+            <div class="icon"><i class="icon-home3"></i></div>
+            <h2 class="heading">Construire</h2>
+            <p>Construire c'est encore mieux. C'est ce que nous avons compris en décidant de vous accompagner. Contacter nous</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
+          <div class="service text-center">
+            <div class="icon"><i class="icon-magnifying-glass"></i></div>
+            <h2 class="heading">Recherche intelligente</h2>
+            <p>Nous vous proposons des résulats quel que soit ce que vous recherchez</p>
+          </div>
+        </div>
+        <div class="clearfix visible-lg-block visible-md-block"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="probootstrap-half reverse">
+    <div class="image-wrap">
+      <div class="image" style="background-image: url(visit/img/architecture-1836070.jpg);"></div>
+    </div>
+    <div class="text">
+      <p class="mb10 subtitle">Propriétaires? Pourquoi nous choisir ?</p>
+      <h3 class="mt0 mb40">Vous faites tout et suivez tout depuis votre téléphone.</h3>
+      <p>Vous suivez le payement de vos locataires ou acheteurs depuis votre platforme. Vous y voyer voyez aussi le solde de votre compte et vous avez la possibilité de retirer quand vous voulez sans vous déplacer.</p>
+      <p class="mb50">Le suivi devient un jeu d'enfant avec nous.</p>
+      <p><a href="#" class="btn btn-primary mb10">Soumettez votre bien</a></p>
+    </div>
+  </section>
+  <hr>
+  <section class="probootstrap-half reverse">
+    <div class="image-wrap">
+      <div class="image" style="background-image: url(visit/img/architecture.jpg);"></div>
+    </div>
+    <div class="text">
+      <p class="mb10 subtitle">Locataire? Acheteurs? Pourquoi nous choisir ?</p>
+      <h3 class="mt0 mb40">Payer et signalez un problème depuis notre platforme.</h3>
+      <p>Consulter votre historique de paiemnt et payer depuis notre platforme sans vous déplacer. Recevez des notifications de paiement de facon instantannée et signalez des problèmes au propriétaire</p>
+      <p class="mb50">Il est temps de louer ou acheter.</p>
+      <p><a href="#" class="btn btn-primary mb10">Voir le catalogue</a></p>
+    </div>
+  </section>
+
+<!--  <section class="probootstrap-section probootstrap-section-lighter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="probootstrap-card text-center probootstrap-animate">
+            <div class="probootstrap-card-media svg-sm colored">
+              <img src="visit/img/flaticon/svg/001-prize.svg" class="svg" alt="Free HTML5 Template by uicookies.com">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading">Award Winning Brooker</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p><a href="#">Find out more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="probootstrap-card text-center probootstrap-animate">
+            <div class="probootstrap-card-media svg-sm colored">
+              <img src="visit/img/flaticon/svg/005-new.svg" class="svg" alt="Free HTML5 Template by uicookies.com">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading">New Houses</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p><a href="#">Find out more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="probootstrap-card text-center  probootstrap-animate">
+            <div class="probootstrap-card-media svg-sm colored">
+              <img src="visit/img/flaticon/svg/006-coin.svg" class="svg" alt="Free HTML5 Template by uicookies.com">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading">Affordable Houses</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p><a href="#">Find out more</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- END: section -->
+
+  <section class="probootstrap-section">
+    <div class="container">
+      <div class="row heading">
+        <h2 class="mt0 mb50 text-center">Nous sommes présent près de chez vous</h2>
+      </div>
+      <div class="row probootstrap-gutter10">
+        <div class="col-md-6 col-sm-6">
+          <a href="#" class="probootstrap-hover-overlay">
+            <img src="visit/img/architecture.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+            <div class="probootstrap-text-overlay">
+              <h3>Abomey-Calavi</h3>
+              <p>430 biens immobiliers</p>
+            </div>
+          </a>
+        </div>
+     <div class="col-md-6 col-sm-6">
+          <a href="#" class="probootstrap-hover-overlay">
+            <img src="visit/img/architecture.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+            <div class="probootstrap-text-overlay">
+              <h3>Cotonou</h3>
+              <p>1500 biens immobiliers</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END: section -->
+
+ 
+  <!-- END: section -->
+  <!--
+  <section class="probootstrap-section probootstrap-section-lighter">
+    <div class="container">
+      <div class="row heading">
+        <h2 class="mt0 mb50 text-center">Our Agents</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="img/person_1.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Jeremy Slater</h2>
+              <p><small>Real Estate Brooker</small></p>
+              <p><a href="#">View Details</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="img/person_2.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">James Butterly</h2>
+              <p><small>Buying Agent</small></p>
+              <p><a href="#">View Details</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="img/person_3.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">James Smith</h2>
+              <p><small>Real Estate Brooker</small></p>
+              <p><a href="#">View Details</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="probootstrap-card probootstrap-person text-left">
+            <div class="probootstrap-card-media">
+              <img src="img/person_4.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+            </div>
+            <div class="probootstrap-card-text">
+              <h2 class="probootstrap-card-heading mb0">Chris White</h2>
+              <p><small>Selling Agent</small></p>
+              <p><a href="#">View Details</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
 {% endblock %}
+
+
+  
+  
+
+  

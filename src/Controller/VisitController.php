@@ -14,4 +14,11 @@ class VisitController extends AbstractController
     {
         return $this->render('visit/index.html.twig');
     }
+    /**
+     * @Route("/properties", name="properties")
+     */
+    public function properties()
+    {
+        return $this->render('visit/properties.html.twig');
+    }
 }
