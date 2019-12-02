@@ -33,7 +33,7 @@ class VisitController extends AbstractController
      */
     public function request()
     {
-        return $this->render('request/request.html.twig');
+        return $this->render('visit/request.html.twig');
     }
     /**
      * @Route("/contact", name="contact")

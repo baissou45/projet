@@ -961,14 +961,14 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 .probootstrap-card.probootstrap-listing .probootstrap-card-media .probootstrap-love:hover, .probootstrap-card.probootstrap-listing .probootstrap-card-media .probootstrap-love:focus {
   -webkit-box-shadow: 0px 2px 8px -6px rgba(0, 0, 0, 0.7);
   box-shadow: 0px 2px 8px -6px rgba(0, 0, 0, 0.7);
-  background: #2866AB;
-  color: #ffffff;
+  background: #ffffff;
+  color: red ;
 }
 
 .probootstrap-card.probootstrap-listing .probootstrap-card-media .probootstrap-love.active {
   -webkit-box-shadow: 0px 6px 8px -6px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 6px 8px -6px rgba(0, 0, 0, 0.1);
-  background: #2866AB;
+  background: red;
   color: #ffffff;
 }
 
