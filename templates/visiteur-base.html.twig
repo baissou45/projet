@@ -8,9 +8,9 @@
     <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
     {% block stylesheets %}
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="visit/css/styles-merged.css">
-    <link rel="stylesheet" href="visit/css/style.css">
-    <link rel="stylesheet" href="visit/css/custom.css">
+    <link rel="stylesheet" href="front-end/css/styles-merged.css">
+    <link rel="stylesheet" href="front-end/css/style.css">
+    <link rel="stylesheet" href="front-endfront-end/css/custom.css">
     {% endblock %}
 
     <!--[if lt IE 9]>
@@ -30,12 +30,11 @@
 
         <nav role="navigation" class="probootstrap-nav hidden-xs">
           <ul class="probootstrap-main-nav">
-            <li class="active" ><a href="index.html">Acceuil</a></li>
-            <li><a href="properties.html">A vendre</a></li>
-            <li><a href="properties.html">A louer</a></li>
+            <li {% if app.request.attributes.get('_route') == "visit" %} class="active" {% endif %}><a href="{{ path('visit')}}">Acceuil</a></li>
+            <li {% if app.request.attributes.get('_route') == "properties" %} class="active" {% endif %}><a href="{{ path('properties')}}">Catalogue</a></li>
             <span class="pull-right">
-              <li><a href="agents.html">Soumettre un bien </a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li {% if app.request.attributes.get('_route') == "request" %} class="active" {% endif %}><a href="{{ path('request')}}">Soumettre un bien </a></li>
+              <li {% if app.request.attributes.get('_route') == "contact" %} class="active" {% endif %}><a href="{{ path('contact')}}">Contact</a></li>
             </span>
 
           </ul>
@@ -125,9 +124,9 @@
   </div>
   
   {% block script %}
-    <script src="visit/js/scripts.min.js"></script>
-    <script src="visit/js/main.min.js"></script>
-    <script src="visit/js/custom.js"></script>
+    <script src="front-end/js/scripts.min.js"></script>
+    <script src="front-end/js/main.min.js"></script>
+    <script src="front-end/js/custom.js"></script>
   {% endblock %}
 
   </body>
