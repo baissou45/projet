@@ -83,16 +83,16 @@
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <label>Votre nom<small>(obligatoire)</small></label>
-                                                    <input name="propertyname" type="text" class="form-control" placeholder="Super villa ...">
+                                                    <input name="propertyname" type="text" class="form-control" placeholder="">
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label>Votre prénom<small>(obligatoire)</small></label>
-                                                    <input name="propertyprice" type="text" class="form-control" placeholder="3330000">
+                                                    <input name="propertyprice" type="text" class="form-control" placeholder="">
                                                 </div> 
                                                 <div class="form-group">
                                                     <label>Telephone <small>(obligatoire)</small></label>
-                                                    <input name="phone" type="text" class="form-control" placeholder="+1 473 843 7436">
+                                                    <input name="phone" type="text" class="form-control" placeholder="00229 ">
                                                 </div>
                                             </div>
                                         </div>
@@ -115,7 +115,7 @@
                                                 <div class="col-sm-3">
                                                     <div class="form-group">
                                                         <label>Ville :</label>
-                                                        <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select your city">
+                                                        <select id="lunchBegins" class="selectpicker show-tick form-control" data-live-search="true" data-live-search-style="begins" title="Selectionner la ville">
                                                             <option>Seoul</option>
                                                             <option>Paris</option>
                                                             <option>Casablanca</option>
@@ -128,7 +128,7 @@
                                                 <div class="col-sm-3">
                                                     <div class="form-group">
                                                         <label>Quartier :</label>
-                                                        <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select your city">
+                                                        <select id="lunchBegins" class="selectpicker show-tick form-control" data-live-search="true" data-live-search-style="begins" title="Selectionner le quartier" required="required">
                                                             <option>New york, CA</option>
                                                             <option>Paris</option>
                                                             <option>Casablanca</option>
@@ -141,12 +141,12 @@
                                                 <div class="col-sm-3">
                                                     <div class="form-group">
                                                         <label>Type de la propriété:</label>
-                                                        <select id="basic" class="selectpicker show-tick form-control" onclick="controleparcelle()">
-                                                            <option> -Status- </option>
+                                                        <select id="basic" class="selectpicker show-tick form-control" onclick="controleparcelle()" title="Si vous prorpiété est une parcelle ou tout autre type veuillez préciser">
+                                                            <option > -Type- </option>
                                                             <option >Parcelle </option>
-                                                            <option>Immeuble</option>
-                                                            <option>Maison</option>
-                                                            <option>Villa</option>
+                                                         	<option >Immeuble</option>
+                                                            <option >Maison</option>
+                                                            <option >Villa</option>
 
                                                         </select>
                                                     </div>
@@ -154,15 +154,15 @@
                                                 <div class="col-sm-3">
                                                     <div class="form-group">
                                                         <label>Statut de la propriété :</label>
-                                                        <select id="statut" class="selectpicker show-tick form-control">
-                                                            <option> -Status- </option>
+                                                        <select id="statut" class="selectpicker show-tick form-control" title="Est t'il a vendre ou a louer ?">
+                                                            <option> -Statut- </option>
                                                             <option>A vendre </option>
                                                             <option>A louer</option>
                                                         </select>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div id="controleparcelle" style="display:none">
+                                            <div id="controleparcelle">
 	                                            <div class="col-sm-12 padding-top-15">                                                   
 	                                                <div class="col-sm-4">
 	                                                    <div class="form-group">
@@ -338,12 +338,12 @@
 
                                 <div class="wizard-footer">
                                     <div class="pull-right">
-                                        <input type='button' class='btn btn-next btn-primary' name='next' value='Next' />
+                                        <input type='button' style="background-color: green;" class='btn btn-next btn-primary' name='next' value='Suivant' />
                                         <input type='button' class='btn btn-finish btn-primary ' name='finish' value='Finish' />
                                     </div>
 
                                     <div class="pull-left">
-                                        <input type='button' class='btn btn-previous btn-default' name='previous' value='Previous' />
+                                        <input type='button' class='btn btn-previous btn-default' name='previous' value='Précédent' />
                                     </div>
                                     <div class="clearfix"></div>                                            
                                 </div>	
@@ -358,23 +358,27 @@
 {% block script %}
 	{{ parent () }}
 	<script>
-                function controleparcelle() 
+		document.getElementById('controleparcelle').style.display = 'none';
+				
+        function controleparcelle() {
+
+
+            var typedebiens = document.getElementById('basic').value;
+
+
+                if (typedebiens=="Parcelle")
                 {
-                        var typedebiens = document.getElementById('basic').value;
-                        if (typedebiens=="parcelle")
-                        {
-                         	document.getElementById('controleparcelle').style.display = 'block';
-                        }
-                        else
-                        {
-                            document.getElementById('controleparcelle').style.display = 'none';
-                        }
+                 	document.getElementById('controleparcelle').style.display = 'block';
                 }
-            </script>
+                else
+                {
+                    document.getElementById('controleparcelle').style.display = 'none';
+                }
+        }
+    </script>
 	<script src="front-end/submit/assets/js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="front-end/submit/bootstrap/js/bootstrap.min.js"></script>
-    <script src="front-end/submit/assets/js/bootstrap-select.min.js"></script>
-    <script src="front-end/submit/assets/js/bootstrap-hover-dropdown.js"></script>
+	<script src="front-end/submit/assets/js/bootstrap-hover-dropdown.js"></script>
     <script src="front-end/submit/assets/js/easypiechart.min.js"></script>
     <script src="front-end/submit/assets/js/jquery.easypiechart.min.js"></script>
     <script src="front-end/submit/assets/js/owl.carousel.min.js"></script>
