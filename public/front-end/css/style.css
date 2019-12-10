@@ -108,7 +108,7 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 
 .probootstrap-logo {
   float: left;
-  color: green;
+  color: #5cb85c;
   padding-left: 20px;
   font-size: 20px;
   display: block;
@@ -229,7 +229,7 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 }
 
 .probootstrap-main-nav li a:hover {
-  color: green;
+  color: #5cb85c;
 }
 
 .probootstrap-mobile-menu-active.show .probootstrap-main-nav li a {
@@ -247,7 +247,7 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 }
 
 .probootstrap-mobile-menu-active .probootstrap-main-nav li a:hover {
-  color: green;
+  color: #5cb85c;
 }
 
 .probootstrap-main-nav li.probootstrap-cta {
@@ -277,16 +277,16 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 }
 
 .probootstrap-main-nav li.active a {
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid #5cb85c;
 }
 
 .probootstrap-main-nav li.active a:hover {
-  border-bottom: 2px solid green;
+  border-bottom: 2px solid #5cb85c;
 }
 
 .probootstrap-mobile-menu-active .probootstrap-main-nav li.active a {
   border-bottom: none !important;
-  color: green;
+  color: #5cb85c;
 }
 
 .probootstrap-mobile-menu-active .probootstrap-main-nav li {
@@ -559,11 +559,11 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 }
 
 .probootstrap-section.probootstrap-section-colored .heading-with-icon, .probootstrap-section.probootstrap-section-dark .heading-with-icon {
-  color: #2866AB;
+  color: #5cb85c;
 }
 
 .probootstrap-section.probootstrap-section-colored .heading-with-icon i, .probootstrap-section.probootstrap-section-dark .heading-with-icon i {
-  color: #2866AB;
+  color: #5cb85c;
 }
 
 .probootstrap-section.probootstrap-section-colored p, .probootstrap-section.probootstrap-section-dark p {
@@ -731,7 +731,7 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 }
 
 .probootstrap-footer.probootstrap-bg h2, .probootstrap-footer.probootstrap-bg h3, .probootstrap-footer.probootstrap-bg .probootstrap-card .probootstrap-card-text .probootstrap-card-heading, .probootstrap-card .probootstrap-card-text .probootstrap-footer.probootstrap-bg .probootstrap-card-heading, .probootstrap-footer.probootstrap-bg .service .heading, .service .probootstrap-footer.probootstrap-bg .heading, .probootstrap-footer.probootstrap-bg h4 {
-  color: green;
+  color: #5cb85c;
 }
 
 .probootstrap-footer.probootstrap-bg:before {
@@ -804,7 +804,7 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   right: 3px;
   padding-left: 15px;
   padding-right: 15px;
-  background: green;
+  background: #5cb85c;
 }
 
 .probootstrap-footer form .btn.btn-subscribe:hover, .probootstrap-footer form .btn.btn-subscribe:active, .probootstrap-footer form .btn.btn-subscribe:focus {
@@ -1595,7 +1595,7 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   transform: translateX(-50%) translateY(-50%);
   font-size: 30px;
   color: rgba(0, 0, 0, 0.2);
-  color: green;
+  color: #5cb85c;
 }
 
 .service p:last-child {
@@ -1696,6 +1696,7 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   appearance: none;
   border-radius: 0;
   border: 2px solid #cccccc;
+  border-radius: 10px;
   background: none;
   color: #000000;
   -webkit-transition: .3s all ease-out;
@@ -1705,7 +1706,7 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 .probootstrap-form .form-control:active, .probootstrap-form .form-control:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
-  border-color: #2866AB;
+  border-color: #5cb85c;
 }
 
 .probootstrap-form textarea.form-control {
@@ -1750,7 +1751,7 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 }
 
 .with-icon.colored i {
-  color: #2866AB;
+  color: #5cb85c;
 }
 
 .probootstrap-section-heading .sub-heading {
@@ -2530,4 +2531,11 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   .section-properties {
     margin-top: -0px;
   }
+}
+
+.contact-text p{
+  text-align: justify;
+}
+.contact-text a{
+  color: #5cb85c;
 }

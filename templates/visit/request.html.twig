@@ -1,7 +1,7 @@
 {% extends 'visiteur-base.html.twig' %}
 {% block stylesheets %} 
-	{{ parent () }}
-	 <link rel="stylesheet" href="front-end/submit/assets/css/normalize.css">
+    {{ parent () }}
+     <link rel="stylesheet" href="front-end/submit/assets/css/normalize.css">
      <link rel="stylesheet" href="front-end/submit/assets/css/font-awesome.min.css">
      <link rel="stylesheet" href="front-end/submit/assets/css/fontello.css">
      <link href="front-end/submit/assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
@@ -20,7 +20,7 @@
 {% endblock %}
 {% block title %}Soumettre un bien - {{ parent () }}{% endblock %}
 {% block content %}
-	<section class="probootstrap-slider flexslider2 page-inner">
+    <section class="probootstrap-slider flexslider2 page-inner">
     <div class="overlay"></div>
     <div class="probootstrap-wrap-banner">
       <div class="container">
@@ -141,13 +141,10 @@
                                                 <div class="col-sm-3">
                                                     <div class="form-group">
                                                         <label>Type de la propriété:</label>
-                                                        <select id="basic" class="selectpicker show-tick form-control" onclick="controleparcelle()" title="Si vous prorpiété est une parcelle ou tout autre type veuillez préciser">
+                                                        <select id="basic" class="selectpicker show-tick form-control" onclick="controle()" title="Si vous prorpiété est une parcelle ou tout autre type veuillez préciser">
                                                             <option > -Type- </option>
                                                             <option >Parcelle </option>
-                                                         	<option >Immeuble</option>
-                                                            <option >Maison</option>
-                                                            <option >Villa</option>
-
+                                                            <option >Batis</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -162,117 +159,132 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col-sm-12" id="step21">
+                                                <div class="col-sm-3" id="superficieparcelle">
+                                                        <div class="form-group">
+                                                            <label>La superficie de la parcelle(en m2)</label>
+                                                            <input id="inputsuperficieparcelle" name="superficieparcelle" type="text" class="form-control"placeholder="" onclick="controle">
+                                                        </div>
+                                                </div>
+                                                <div class="col-sm-3" id="nbrlot">
+                                                        <div class="form-group">
+                                                            <label>Le nombre de lots</label>
+                                                            <input id="inputnbrlot" name="superficieparcelle" type="text" class="form-control"placeholder="" title="Par exemple j'ai des chambres de type 1 chambre 1 salon et ceux de type 2 chambres 1 salon" onclick="controle">
+                                                        </div>
+                                                </div>
+                                            </div>
+
                                             <div id="controleparcelle">
-	                                            <div class="col-sm-12 padding-top-15">                                                   
-	                                                <div class="col-sm-4">
-	                                                    <div class="form-group">
-	                                                        <label for="property-geo">Min bed :</label>
-	                                                        <input type="text" class="span2" value="" data-slider-min="0" 
-	                                                               data-slider-max="600" data-slider-step="5" 
-	                                                               data-slider-value="[250,450]" id="min-bed" ><br />
-	                                                        <b class="pull-left color">1</b> 
-	                                                        <b class="pull-right color">120</b>
-	                                                    </div>
-	                                                </div>
-	                                                <div class="col-sm-4">
+                                                <div class="col-sm-12 padding-top-15">                                                   
+                                                    <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                            <label for="property-geo">Min bed :</label>
+                                                            <input type="text" class="span2" value="" data-slider-min="0" 
+                                                                   data-slider-max="600" data-slider-step="5" 
+                                                                   data-slider-value="[250,450]" id="min-bed" ><br />
+                                                            <b class="pull-left color">1</b> 
+                                                            <b class="pull-right color">120</b>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
 
-	                                                    <div class="form-group">
-	                                                        <label for="price-range">Min baths :</label>
-	                                                        <input type="text" class="span2" value="" data-slider-min="0" 
-	                                                               data-slider-max="600" data-slider-step="5" 
-	                                                               data-slider-value="[250,450]" id="min-baths" ><br />
-	                                                        <b class="pull-left color">1</b> 
-	                                                        <b class="pull-right color">120</b>
-	                                                    </div>
-	                                                </div>
-	                                                <div class="col-sm-4">
+                                                        <div class="form-group">
+                                                            <label for="price-range">Min baths :</label>
+                                                            <input type="text" class="span2" value="" data-slider-min="0" 
+                                                                   data-slider-max="600" data-slider-step="5" 
+                                                                   data-slider-value="[250,450]" id="min-baths" ><br />
+                                                            <b class="pull-left color">1</b> 
+                                                            <b class="pull-right color">120</b>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
 
-	                                                    <div class="form-group">
-	                                                        <label for="property-geo">Property geo (m2) :</label>
-	                                                        <input type="text" class="span2" value="" data-slider-min="0" 
-	                                                               data-slider-max="600" data-slider-step="5" 
-	                                                               data-slider-value="[50,450]" id="property-geo" ><br />
-	                                                        <b class="pull-left color">40m</b> 
-	                                                        <b class="pull-right color">12000m</b>
-	                                                    </div>
-	                                                </div>   
-	                                            </div>
-	                                            <div class="col-sm-12 padding-top-15">
-	                                                <div class="col-sm-3">
-	                                                    <div class="form-group">
-	                                                        <div class="checkbox">
-	                                                            <label>
-	                                                                <input type="checkbox"> Swimming Pool
-	                                                            </label>
-	                                                        </div>
-	                                                    </div>
-	                                                </div> 
-	                                                <div class="col-sm-3">
-	                                                    <div class="form-group">
-	                                                        <div class="checkbox">
-	                                                            <label>
-	                                                                <input type="checkbox"> 2 Stories
-	                                                            </label>
-	                                                        </div>
-	                                                    </div>
-	                                                </div>                                                 
-	                                                <div class="col-sm-3">
-	                                                    <div class="form-group">
-	                                                        <div class="checkbox">
-	                                                            <label>
-	                                                                <input type="checkbox"> Emergency Exit
-	                                                            </label>
-	                                                        </div>
-	                                                    </div>
-	                                                </div>                                                 
-	                                                <div class="col-sm-3">
-	                                                    <div class="form-group">
-	                                                        <div class="checkbox">
-	                                                            <label>
-	                                                                <input type="checkbox"> Fire Place 
-	                                                            </label>
-	                                                        </div>
-	                                                    </div>
-	                                                </div> 
-	                                            </div> 
-	                                            <div class="col-sm-12 padding-bottom-15">
-	                                                <div class="col-sm-3">
-	                                                    <div class="form-group">
-	                                                        <div class="checkbox">
-	                                                            <label>
-	                                                                <input type="checkbox"> Laundry Room
-	                                                            </label>
-	                                                        </div>
-	                                                    </div>
-	                                                </div>
-	                                                <div class="col-sm-3">
-	                                                    <div class="form-group">
-	                                                        <div class="checkbox">
-	                                                            <label>
-	                                                                <input type="checkbox"> Jog Path
-	                                                            </label>
-	                                                        </div>
-	                                                    </div>
-	                                                </div>
-	                                                <div class="col-sm-3">
-	                                                    <div class="form-group">
-	                                                        <div class="checkbox">
-	                                                            <label>
-	                                                                <input type="checkbox"> Ceilings
-	                                                            </label>
-	                                                        </div>
-	                                                    </div>
-	                                                </div>
-	                                                <div class="col-sm-3">
-	                                                    <div class="form-group">
-	                                                        <div class="checkbox">
-	                                                            <label>
-	                                                                <input type="checkbox"> Dual Sinks
-	                                                            </label>
-	                                                        </div>
-	                                                    </div>
-	                                                </div>
-	                                            </div>
+                                                        <div class="form-group">
+                                                            <label for="property-geo">Property geo (m2) :</label>
+                                                            <input type="text" class="span2" value="" data-slider-min="0" 
+                                                                   data-slider-max="600" data-slider-step="5" 
+                                                                   data-slider-value="[50,450]" id="property-geo" ><br />
+                                                            <b class="pull-left color">40m</b> 
+                                                            <b class="pull-right color">12000m</b>
+                                                        </div>
+                                                    </div>   
+                                                </div>
+                                                <div class="col-sm-12 padding-top-15">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox"> Swimming Pool
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox"> 2 Stories
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                 
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox"> Emergency Exit
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                 
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox"> Fire Place 
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </div> 
+                                                <div class="col-sm-12 padding-bottom-15">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox"> Laundry Room
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox"> Jog Path
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox"> Ceilings
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox"> Dual Sinks
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <br>
                                         </div>
@@ -346,7 +358,7 @@
                                         <input type='button' class='btn btn-previous btn-default' name='previous' value='Précédent' />
                                     </div>
                                     <div class="clearfix"></div>                                            
-                                </div>	
+                                </div>  
                             </form>
                         </div>
                         <!-- End submit form -->
@@ -356,11 +368,13 @@
         </div>
 {% endblock %}
 {% block script %}
-	{{ parent () }}
-	<script>
-		document.getElementById('controleparcelle').style.display = 'none';
-				
-        function controleparcelle() {
+    {{ parent () }}
+    <script>
+        document.getElementById('controleparcelle').style.display = 'none';
+        document.getElementById('superficieparcelle').style.display = 'none';
+        document.getElementById('nbrlot').style.display = 'none';
+                
+        function controle() {
 
 
             var typedebiens = document.getElementById('basic').value;
@@ -368,19 +382,21 @@
 
                 if (typedebiens=="Parcelle")
                 {
-                 	document.getElementById('controleparcelle').style.display = 'block';
+                    document.getElementById('superficieparcelle').style.display = 'block';
+                    document.getElementById('nbrlot').style.display = 'none';
                 }
-                else
+                else if (typedebiens=="Batis") 
                 {
-                    document.getElementById('controleparcelle').style.display = 'none';
+                    document.getElementById('nbrlot').style.display = 'block';
+                    document.getElementById('superficieparcelle').style.display = 'none';
                 }
-        }
+                        }
     </script>
-	<script src="front-end/submit/assets/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="front-end/submit/assets/js/vendor/modernizr-2.6.2.min.js"></script>
     <script src="front-end/submit/bootstrap/js/bootstrap.min.js"></script>
-	<script src="front-end/submit/assets/js/bootstrap-hover-dropdown.js"></script>
+    <script src="front-end/submit/assets/js/bootstrap-hover-dropdown.js"></script>
     <script src="front-end/submit/assets/js/easypiechart.min.js"></script>
-    <script src="front-end/submit/assets/js/jquery.easypiechart.min.js"></script>
+    <script src="front-end/submit/assets/js/jquery.easypiechart.min.js"></script>   
     <script src="front-end/submit/assets/js/owl.carousel.min.js"></script>
     <script src="front-end/submit/assets/js/wow.js"></script>
     <script src="front-end/submit/assets/js/icheck.min.js"></script>
@@ -388,6 +404,6 @@
     <script src="front-end/submit/assets/js/jquery.bootstrap.wizard.js" type="text/javascript"></script>
     <script src="front-end/submit/assets/js/jquery.validate.min.js"></script>
     <script src="front-end/submit/assets/js/wizard.js"></script>
-	<script src="front-end/submit/assets/js/main.js"></script>
-	
+    <script src="front-end/submit/assets/js/main.js"></script>
+    
 {% endblock %}

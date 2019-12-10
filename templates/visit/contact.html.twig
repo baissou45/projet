@@ -1,0 +1,84 @@
+{% extends 'visiteur-base.html.twig' %}
+{% block content %}
+  <section class="probootstrap-slider flexslider2 page-inner">
+    <div class="overlay"></div>
+    <div class="probootstrap-wrap-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+
+            <div class="page-title probootstrap-animate">
+              <div class="probootstrap-breadcrumbs">
+                <a href="#">Acceuil</a><span>Contact</span>
+              </div>
+              <h1>Contacter nous ici</h1>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="slides">
+      <li style="background-image: url(front-end/img/architecture.jpg);"></li>
+      <li style="background-image: url(front-end/img/archtecture-1836070.jpg);"></li>
+      <li style="background-image: url(front-end/img/architecture.jpg);"></li>
+    </ul>
+  </section>
+  <!-- END: slider  -->
+  
+  <section class="probootstrap-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <form action="#" method="post" class="probootstrap-form mb60">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="fname">Nom</label>
+                  <input type="text" class="form-control" id="fname" name="fname">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="lname">Prénom</label>
+                  <input type="text" class="form-control" id="lname" name="lname">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="message">Votre message</label>
+              <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-success" id="submit" name="submit" value="Envoyer le message">
+            </div>
+          </form>
+        </div>
+        <div class="col-md-3 col-md-push-1 contact-text">
+          <h4>Ou rapprochez vous de nous</h4>
+          <ul class="with-icon colored">
+            <li><i class="icon-location2"></i> <span>Ste rita quartier immo/Sud</span></li>
+            <li><i class="icon-mail"></i><span>info@domain.com</span></li>
+            <li><i class="icon-phone2"></i><span>+229 97 95 52 77</span></li>
+          </ul>
+
+          <h4>Vous etes propriétaire ?</h4>
+          <p>Nous vous proposons une gestion éfficace et éfficiente de vos biens. Et bien sur vous aurez un compte rendu de notre gestion via notre application web.</p>
+          <p><a href="#">Je soumet mon bien</a></p>
+        </div>
+      </div>
+    </div>
+  </section>  
+  <div id="map"></div>
+  
+{% endblock %}
+
+{% block script %}
+{{ parent () }}
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+{% endblock %}
