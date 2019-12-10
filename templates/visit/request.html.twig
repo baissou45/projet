@@ -1,22 +1,26 @@
 {% extends 'visiteur-base.html.twig' %}
 {% block stylesheets %} 
     {{ parent () }}
-     <link rel="stylesheet" href="front-end/submit/assets/css/normalize.css">
+     <!-- <link rel="stylesheet" href="front-end/submit/assets/css/normalize.css"> 
      <link rel="stylesheet" href="front-end/submit/assets/css/font-awesome.min.css">
      <link rel="stylesheet" href="front-end/submit/assets/css/fontello.css">
      <link href="front-end/submit/assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
      <link href="front-end/submit/assets/fonts/icon-7-stroke/css/helper.css" rel="stylesheet">
-     <link href="front-end/submitassets/css/animate.css" rel="stylesheet" media="screen">
+     <link href="front-end/submitassets/css/animate.css" rel="stylesheet" media="screen"> 
+     
+     
+      !--> 
+     <link rel="stylesheet" href="front-end/submit/bootstrap/css/bootstrap.min.css"> 
+     <link rel="stylesheet" href="front-end/submit/assets/css/responsive.css">
+     <link rel="stylesheet" href="front-end/submit/assets/css/style.css">
      <link rel="stylesheet" href="front-end/submit/assets/css/bootstrap-select.min.css"> 
-     <link rel="stylesheet" href="front-end/submit/bootstrap/css/bootstrap.min.css">
-     <link rel="stylesheet" href="front-end/submit/assets/css/icheck.min_all.css">
+     <link rel="stylesheet" href="front-end/submit/assets/css/icheck.min_all.css"> 
      <link rel="stylesheet" href="front-end/submit/assets/css/price-range.css">
      <link rel="stylesheet" href="front-end/submit/assets/css/owl.carousel.css">  
      <link rel="stylesheet" href="front-end/submit/assets/css/owl.theme.css">
      <link rel="stylesheet" href="front-end/submit/assets/css/owl.transitions.css"> 
      <link rel="stylesheet" href="front-end/submit/assets/css/wizard.css"> 
-     <link rel="stylesheet" href="front-end/submit/assets/css/style.css">
-     <link rel="stylesheet" href="front-end/submit/assets/css/responsive.css">
+     
 {% endblock %}
 {% block title %}Soumettre un bien - {{ parent () }}{% endblock %}
 {% block content %}
@@ -75,8 +79,8 @@
                                                 <div class="picture-container">
                                                     <div class="picture">
                                                         <img src="assets/img/default-property.jpg" class="picture-src" id="wizardPicturePreview" title=""/>
-                                                        <input type="file" id="wizard-picture">
-                                                        <label for="wizard-picture">Entrer une image de vous (optionnel) </label>
+                                                        <input type="file" id="wizard-picture" placeholder="Entrer un image de vous">
+                                                        <label for="wizard-picture"></label>
                                                     </div> 
                                                 </div>
                                             </div>

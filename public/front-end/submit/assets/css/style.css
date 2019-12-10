@@ -577,7 +577,7 @@ label small{
     width: 100%;
 }
 .input-group-btn .btn{
-    background-color: #FFC500;
+    background-color: green;
     border-color: #FFC500;
     border-radius: 0px;
     height: 44px;
@@ -1214,7 +1214,7 @@ Asside widgets CSS
     background: blue;
 }
 .panel.sidebar-menu .panel-body span.colour.yellow {
-    background: yellow;
+    background: green;
 }
 .panel.sidebar-menu .panel-body label {
     color: #777;
