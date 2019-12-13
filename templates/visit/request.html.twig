@@ -193,6 +193,7 @@
                                                     <div class="form-group">
                                                         <label>Type du lot:</label>
                                                         <select id="typedelot" class="selectpicker show-tick form-control" data-live-search="true" data-live-search-style="begins" title="Selectionner le type de lot" onclick="controle()">
+                                                            <option>- Type -</option>
                                                             <option>Habitation</option>
                                                             <option>Bureau</option>
                                                             <option>Magasin ou Boutique</option>
@@ -695,6 +696,7 @@
 {% block script %}
 {{ parent () }}
 <script>
+     
     document.getElementById('nbrlot').style.display = 'none';
     document.getElementById('choix_image').style.display = 'none';
     document.getElementById('habitat').style.display = 'none';
@@ -703,6 +705,7 @@
     document.getElementById('habitation').style.display = 'none';
     document.getElementById('bureau').style.display = 'none';
     document.getElementById('boutique').style.display = 'none';
+    document.getElementById('lot').style.display = 'block';
 
 
     function controle() {
@@ -710,6 +713,7 @@
 
         var typedebiens = document.getElementById('basic').value;
 
+        var nombredelot = parseInt(document.getElementById('inputnbrlot').value);
 
         if (typedebiens=="Parcelle")
         {
@@ -719,9 +723,21 @@
         }
         else if (typedebiens=="Batis") 
         {
+           
+
             document.getElementById('nbrlot').style.display = 'block';
             document.getElementById('caracteristique_parcelle').style.display = 'none';
             document.getElementById('habitat').style.display = 'block';
+
+
+             for (var i = 0; i < nombredelot; i++) {
+                $(function() {
+                $('#habitat').append($('#lots'));
+                }); 
+                
+            }
+
+            
             if (document.getElementById('typedelot').value =="Habitation") {
                 document.getElementById('habitation').style.display = 'block';
                 document.getElementById('bureau').style.display = 'none';
@@ -766,5 +782,6 @@
 <script src="front-end/submit/assets/js/jquery.validate.min.js"></script>
 <script src="front-end/submit/assets/js/wizard.js"></script>
 <script src="front-end/submit/assets/js/main.js"></script>
+
 
 {% endblock %}
