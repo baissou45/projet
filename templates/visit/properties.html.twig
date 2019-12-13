@@ -1,455 +1,507 @@
 {% extends 'visiteur-base.html.twig' %}
 {% block title %}Propriétés - {{ parent () }}{% endblock %}
 {% block content %}
-  <section class="section-properties">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-10 col-md-offset-1">
 
-            <div class="probootstrap-home-search probootstrap-animate">
-              <form action="" method="post">
-                <h2 class="heading">Rechercher </h2>
-                <div class="probootstrap-field-group">
-                  <div class="probootstrap-fields">
-                    
-                    <div class="search-field">
-                      <i class="icon-location2"></i>
-                      <input type="text" class="form-control" placeholder="Entrer une adresse">
-                    </div>
-                    <div class="search-category">
-                      <i class="icon-chevron-down"></i>
-                      <select name="#" id="" class="form-control">
-                        <option value="">A vendre</option>
-                        <option value="">A louer</option>
-                      </select>
-                    </div>
-                    <div class="search-category">
-                      <i class="icon-chevron-down"></i>
-                      <select name="#" id="" class="form-control">
-                        <option value="">Parcelle</option>
-                        <option value="">Maison</option>
-                        <option value="">Boutique</option>
-                        <option value="">Immeuble </option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <button class="btn btn-success" type="submit"><i class="icon-magnifying-glass t2"></i> Rechercher</button>
-                </div>
-              </form>
-              <p class="mb0 text-left"><small>Pour des résultats plus concrets nous souhaitons accéder a votre position.<a href=""> Je permet</a></small> </p>
-            </div>
+{% include 'visit/search-properties.html.twig' %}
 
 
+<div class="probootstrap-home-search probootstrap-animate search-properties" id="hidden-content" >
+  <form action="" method="post">
+    <h2 class="heading">Rechercher votre nouvel habitat ici.</h2>
+    <div class="probootstrap-field-group">
+      <div class="probootstrap-fields">
+
+        <div class="search-field">
+          <i class="icon-location2"></i>
+          <input type="text" class="form-control" placeholder="Entrer une adresse">
+        </div>
+        <div class="search-category">
+          <i class="icon-chevron-down"></i>
+          <select name="#" id="" class="form-control">
+            <option value="">A vendre</option>
+            <option value="">A louer</option>
+          </select>
+        </div>
+        <div class="search-category">
+          <i class="icon-chevron-down"></i>
+          <select name="#" id="" class="form-control">
+            <option value="">Parcelle</option>
+            <option value="">Maison</option>
+            <option value="">Boutique</option>
+            <option value="">Immeuble </option>
+          </select>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- END: slider  -->
 
-  <section class="probootstrap-section probootstrap-section-lighter">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 col-sm-6">
-          <div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="{{ path('properties')}}" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
-              </div>
-              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
-              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Superficie
-                  <span>2400 m2</span>
-                </li>
-                <li>
-                  Salon
-                  <span>2</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>3</span>
-                </li>
-                <li>
-                  Garages
-                  <span>1</span>
-                </li>
-              </ul>
-            </div>
+      <button class="btn btn-success" type="submit"><i class="icon-magnifying-glass t2"></i> Rechercher</button>
+    </div>
+  </form>
+  <p class="mb0 text-center soumission_info" ><small>Etes vous propriétaire d'une maison, d'une parcelle a vendre ou a louer ? <a href="{{ path('request')}}">Soumetter nous votre bien</a></small> </p>
+</div>
+
+
+
+<!-- END: slider  -->
+
+<section class="probootstrap-section probootstrap-section-lighter">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="probootstrap-card probootstrap-listing">
+          <div class="probootstrap-card-media">
+            <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+            <a href="{{ path('properties')}}" class="probootstrap-love"><i class="icon-heart"></i></a>
           </div>
-          <!-- END listing -->
+          <div class="probootstrap-card-text">
+            <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+            <div class="probootstrap-listing-location">
+              <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+            </div>
+            <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+            <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+          </div>
+          <div class="probootstrap-card-extra">
+            <ul>
+              <li>
+                Superficie
+                <span>2400 m2</span>
+              </li>
+              <li>
+                Salon
+                <span>2</span>
+              </li>
+              <li>
+                Chambres
+                <span>3</span>
+              </li>
+              <li>
+                Garages
+                <span>1</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
-              </div>
-              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
-              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Superficie
-                  <span>2400 m2</span>
-                </li>
-                <li>
-                  Salon
-                  <span>2</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>3</span>
-                </li>
-                <li>
-                  Garages
-                  <span>1</span>
-                </li>
-              </ul>
-            </div>
+        <!-- END listing -->
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="probootstrap-card probootstrap-listing">
+          <div class="probootstrap-card-media">
+            <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+            <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
           </div>
-          <!-- END listing -->
+          <div class="probootstrap-card-text">
+            <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+            <div class="probootstrap-listing-location">
+              <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+            </div>
+            <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+            <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+          </div>
+          <div class="probootstrap-card-extra">
+            <ul>
+              <li>
+                Superficie
+                <span>2400 m2</span>
+              </li>
+              <li>
+                Salon
+                <span>2</span>
+              </li>
+              <li>
+                Chambres
+                <span>3</span>
+              </li>
+              <li>
+                Garages
+                <span>1</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
-              </div>
-              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
-              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Superficie
-                  <span>2400 m2</span>
-                </li>
-                <li>
-                  Salon
-                  <span>2</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>3</span>
-                </li>
-                <li>
-                  Garages
-                  <span>1</span>
-                </li>
-              </ul>
-            </div>
+        <!-- END listing -->
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="probootstrap-card probootstrap-listing">
+          <div class="probootstrap-card-media">
+            <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+            <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
           </div>
-          <!-- END listing -->
+          <div class="probootstrap-card-text">
+            <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+            <div class="probootstrap-listing-location">
+              <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+            </div>
+            <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+            <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+          </div>
+          <div class="probootstrap-card-extra">
+            <ul>
+              <li>
+                Superficie
+                <span>2400 m2</span>
+              </li>
+              <li>
+                Salon
+                <span>2</span>
+              </li>
+              <li>
+                Chambres
+                <span>3</span>
+              </li>
+              <li>
+                Garages
+                <span>1</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
-              </div>
-              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
-              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Superficie
-                  <span>2400 m2</span>
-                </li>
-                <li>
-                  Salon
-                  <span>2</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>3</span>
-                </li>
-                <li>
-                  Garages
-                  <span>1</span>
-                </li>
-              </ul>
-            </div>
+        <!-- END listing -->
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="probootstrap-card probootstrap-listing">
+          <div class="probootstrap-card-media">
+            <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+            <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
           </div>
-          <!-- END listing -->
+          <div class="probootstrap-card-text">
+            <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+            <div class="probootstrap-listing-location">
+              <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+            </div>
+            <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+            <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+          </div>
+          <div class="probootstrap-card-extra">
+            <ul>
+              <li>
+                Superficie
+                <span>2400 m2</span>
+              </li>
+              <li>
+                Salon
+                <span>2</span>
+              </li>
+              <li>
+                Chambres
+                <span>3</span>
+              </li>
+              <li>
+                Garages
+                <span>1</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
-              </div>
-              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
-              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Superficie
-                  <span>2400 m2</span>
-                </li>
-                <li>
-                  Salon
-                  <span>2</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>3</span>
-                </li>
-                <li>
-                  Garages
-                  <span>1</span>
-                </li>
-              </ul>
-            </div>
+        <!-- END listing -->
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="probootstrap-card probootstrap-listing">
+          <div class="probootstrap-card-media">
+            <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+            <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
           </div>
-          <!-- END listing -->
+          <div class="probootstrap-card-text">
+            <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+            <div class="probootstrap-listing-location">
+              <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+            </div>
+            <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+            <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+          </div>
+          <div class="probootstrap-card-extra">
+            <ul>
+              <li>
+                Superficie
+                <span>2400 m2</span>
+              </li>
+              <li>
+                Salon
+                <span>2</span>
+              </li>
+              <li>
+                Chambres
+                <span>3</span>
+              </li>
+              <li>
+                Garages
+                <span>1</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
-              </div>
-              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
-              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Superficie
-                  <span>2400 m2</span>
-                </li>
-                <li>
-                  Salon
-                  <span>2</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>3</span>
-                </li>
-                <li>
-                  Garages
-                  <span>1</span>
-                </li>
-              </ul>
-            </div>
+        <!-- END listing -->
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="probootstrap-card probootstrap-listing">
+          <div class="probootstrap-card-media">
+            <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+            <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
           </div>
-          <!-- END listing -->
+          <div class="probootstrap-card-text">
+            <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+            <div class="probootstrap-listing-location">
+              <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+            </div>
+            <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+            <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+          </div>
+          <div class="probootstrap-card-extra">
+            <ul>
+              <li>
+                Superficie
+                <span>2400 m2</span>
+              </li>
+              <li>
+                Salon
+                <span>2</span>
+              </li>
+              <li>
+                Chambres
+                <span>3</span>
+              </li>
+              <li>
+                Garages
+                <span>1</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
-              </div>
-              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
-              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Superficie
-                  <span>2400 m2</span>
-                </li>
-                <li>
-                  Salon
-                  <span>2</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>3</span>
-                </li>
-                <li>
-                  Garages
-                  <span>1</span>
-                </li>
-              </ul>
-            </div>
+        <!-- END listing -->
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="probootstrap-card probootstrap-listing">
+          <div class="probootstrap-card-media">
+            <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+            <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
           </div>
-          <!-- END listing -->
+          <div class="probootstrap-card-text">
+            <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+            <div class="probootstrap-listing-location">
+              <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+            </div>
+            <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+            <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+          </div>
+          <div class="probootstrap-card-extra">
+            <ul>
+              <li>
+                Superficie
+                <span>2400 m2</span>
+              </li>
+              <li>
+                Salon
+                <span>2</span>
+              </li>
+              <li>
+                Chambres
+                <span>3</span>
+              </li>
+              <li>
+                Garages
+                <span>1</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
-              </div>
-              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
-              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Superficie
-                  <span>2400 m2</span>
-                </li>
-                <li>
-                  Salon
-                  <span>2</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>3</span>
-                </li>
-                <li>
-                  Garages
-                  <span>1</span>
-                </li>
-              </ul>
-            </div>
+        <!-- END listing -->
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="probootstrap-card probootstrap-listing">
+          <div class="probootstrap-card-media">
+            <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+            <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
           </div>
-          <!-- END listing -->
+          <div class="probootstrap-card-text">
+            <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+            <div class="probootstrap-listing-location">
+              <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+            </div>
+            <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+            <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+          </div>
+          <div class="probootstrap-card-extra">
+            <ul>
+              <li>
+                Superficie
+                <span>2400 m2</span>
+              </li>
+              <li>
+                Salon
+                <span>2</span>
+              </li>
+              <li>
+                Chambres
+                <span>3</span>
+              </li>
+              <li>
+                Garages
+                <span>1</span>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
-              </div>
-              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
-              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Superficie
-                  <span>2400 m2</span>
-                </li>
-                <li>
-                  Salon
-                  <span>2</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>3</span>
-                </li>
-                <li>
-                  Garages
-                  <span>1</span>
-                </li>
-              </ul>
-            </div>
+        <!-- END listing -->
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="probootstrap-card probootstrap-listing">
+          <div class="probootstrap-card-media">
+            <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+            <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
           </div>
+          <div class="probootstrap-card-text">
+            <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+            <div class="probootstrap-listing-location">
+              <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+            </div>
+            <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+            <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+          </div>
+          <div class="probootstrap-card-extra">
+            <ul>
+              <li>
+                Superficie
+                <span>2400 m2</span>
+              </li>
+              <li>
+                Salon
+                <span>2</span>
+              </li>
+              <li>
+                Chambres
+                <span>3</span>
+              </li>
+              <li>
+                Garages
+                <span>1</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- END listing -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <div class="content" style="">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-12 ">
+        <div class="card">
+          <div class="content" style="height:300px;">
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height:300px;width:100%;">
+             
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+              </ol>
+
           
-          <!-- END listing -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="front-end/img/architecture.jpg" alt="Los Angeles">
+                </div>
+
+                <div class="item">
+                  <img src="Capture245454.PNG" alt="Chicago" class="">
+                </div>
+
+                <div class="item">
+                  <img src="a5.jpg" alt="New York" class="">
+                </div>
+
+                <div class="item">
+                  <img src="a22.jpg" alt="New York" class="">
+                </div>
+
+                <div class="item">
+                  <img src="4.jpg" alt="New York" class="">
+                </div>
+              </div>
+
+           
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </div>
+
+          </div>
         </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</div> -->
 
-  
-
-  <section class="probootstrap-section">
-    <div class="container">
-      <div class="row heading">
-        <h2 class="mt0 mb50 text-center">A calavi</h2>
-      </div>
-      <div class="row probootstrap-gutter10">
-        <div class="col-md-6 col-sm-6">
-          <a href="#" class="probootstrap-hover-overlay">
-            <img src="front-end/img/architecture.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
-            <div class="probootstrap-text-overlay">
-              <h3>Tankpè</h3>
-              <p>430 Properties</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-sm-6">
-          <a href="#" class="probootstrap-hover-overlay">
-            <img src="front-end/img/architecture.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
-            <div class="probootstrap-text-overlay">
-              <h3>Zogbadjè</h3>
-              <p>294 Properties</p>
-            </div>
-          </a>
-        </div>
-        <div class="clearfix visible-sm-block"></div>
-
-        <div class="col-md-4 col-sm-6">
-          <a href="#" class="probootstrap-hover-overlay">
-            <img src="front-end/img/architecture.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
-            <div class="probootstrap-text-overlay">
-              <h3>Houeto</h3>
-              <p>300 Properties</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <a href="#" class="probootstrap-hover-overlay">
-            <img src="front-end/img/architecture.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
-            <div class="probootstrap-text-overlay">
-              <h3>Arconville</h3>
-              <p>268 Properties</p>
-            </div>
-          </a>
-        </div>
-        <div class="clearfix visible-sm-block"></div>
-        <div class="col-md-4 col-sm-6">
-          <a href="#" class="probootstrap-hover-overlay">
-            <img src="front-end/img/architecture.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
-            <div class="probootstrap-text-overlay">
-              <h3>Agori</h3>
-              <p>342 Properties</p>
-            </div>
-          </a>
-        </div>
-
-
-      </div>
+<section class="probootstrap-section">
+  <div class="container">
+    <div class="row heading">
+      <h2 class="mt0 mb50 text-center">A calavi</h2>
     </div>
-  </section>
-  <!-- END: section -->
+    <div class="row probootstrap-gutter10">
+      <div class="col-md-6 col-sm-6">
+        <a href="#" class="probootstrap-hover-overlay">
+          <img src="front-end/img/architecture.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+          <div class="probootstrap-text-overlay">
+            <h3>Tankpè</h3>
+            <p>430 Properties</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <a href="#" class="probootstrap-hover-overlay">
+          <img src="front-end/img/architecture.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+          <div class="probootstrap-text-overlay">
+            <h3>Zogbadjè</h3>
+            <p>294 Properties</p>
+          </div>
+        </a>
+      </div>
+      <div class="clearfix visible-sm-block"></div>
 
-  
+      <div class="col-md-4 col-sm-6">
+        <a href="#" class="probootstrap-hover-overlay">
+          <img src="front-end/img/architecture.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+          <div class="probootstrap-text-overlay">
+            <h3>Houeto</h3>
+            <p>300 Properties</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <a href="#" class="probootstrap-hover-overlay">
+          <img src="front-end/img/architecture.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+          <div class="probootstrap-text-overlay">
+            <h3>Arconville</h3>
+            <p>268 Properties</p>
+          </div>
+        </a>
+      </div>
+      <div class="clearfix visible-sm-block"></div>
+      <div class="col-md-4 col-sm-6">
+        <a href="#" class="probootstrap-hover-overlay">
+          <img src="front-end/img/architecture.jpg" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+          <div class="probootstrap-text-overlay">
+            <h3>Agori</h3>
+            <p>342 Properties</p>
+          </div>
+        </a>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<!-- END: section -->
+
+
 {% endblock %}

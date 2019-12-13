@@ -1,5 +1,29 @@
 {% extends 'visiteur-base.html.twig' %}
 {% block title %}Contacter nous - {{ parent () }}{% endblock %}
+ {% block stylesheets %} 
+    {{ parent () }}
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="front-end/view/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="front-end/view/css/animate.css">
+    
+    <link rel="stylesheet" href="front-end/view/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="front-end/view/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="front-end/view/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="front-end/view/css/aos.css">
+
+    <link rel="stylesheet" href="front-end/view/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="front-end/view/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="front-end/view/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="front-end/view/css/flaticon.css">
+    <link rel="stylesheet" href="front-end/view/css/icomoon.css">
+    <link rel="stylesheet" href="front-end/view/css/style.css">
+
+    {% endblock %}
 {% block content %}
   <section class="probootstrap-slider flexslider2 page-inner">
     <div class="overlay"></div>
@@ -27,56 +51,97 @@
   </section>
   <!-- END: slider  -->
   
-  <section class="probootstrap-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <form action="#" method="post" class="probootstrap-form mb60">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="fname">Nom</label>
-                  <input type="text" class="form-control" id="fname" name="fname">
+  <section class="ftco-section contact-section">
+      <div class="container">
+        <div class="row d-flex mb-5 contact-info justify-content-center">
+          <div class="col-md-8">
+            <div class="row mb-5">
+              <div class="col-md-4 text-center py-4">
+                <div class="icon">
+                  <span class="icon-map-o"></span>
                 </div>
+                <p><span>Addresse:</span> Cotonou Rue des oliviers</p>
               </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <label for="lname">Prénom</label>
-                  <input type="text" class="form-control" id="lname" name="lname">
+              <div class="col-md-4 text-center border-height py-4">
+                <div class="icon">
+                  <span class="icon-mobile-phone"></span>
                 </div>
+                <p><span>Phone:</span> <a href="tel://1234567920">00229 97 95 52 77</a></p>
+              </div>
+              <div class="col-md-4 text-center py-4">
+                <div class="icon">
+                  <span class="icon-envelope-o"></span>
+                </div>
+                <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@immo.com</a></p>
               </div>
             </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" name="email">
-            </div>
-            <div class="form-group">
-              <label for="message">Votre message</label>
-              <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" class="btn btn-success" id="submit" name="submit" value="Envoyer le message">
-            </div>
-          </form>
+          </div>
         </div>
-        <div class="col-md-3 col-md-push-1 contact-text">
-          <h4>Ou rapprochez vous de nous</h4>
-          <ul class="with-icon colored">
-            <li><i class="icon-location2"></i> <span>Ste rita quartier immo/Sud</span></li>
-            <li><i class="icon-mail"></i><span>info@domain.com</span></li>
-            <li><i class="icon-phone2"></i><span>+229 97 95 52 77</span></li>
-          </ul>
-
-          <h4>Vous etes propriétaire ?</h4>
-          <p>Nous vous proposons une gestion éfficace et éfficiente de vos biens. Et bien sur vous aurez un compte rendu de notre gestion via notre application web.</p>
-          <p><a href="#">Je soumet mon bien</a></p>
+        <div class="row block-9 justify-content-center mb-5">
+          <div class="col-md-8 mb-md-5">
+            <h2 class="text-center">Pour toutes vos questions, <br>nous vous répondrons dans un délai bref</h2>
+            <form action="#" class="bg-light p-5 contact-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Votre nom">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Votre email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Objet">
+              </div>
+              <div class="form-group">
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Votre message"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Envoyer nous le message" class="btn btn-primary py-3 px-5">
+              </div>
+            </form>
+          
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div id="map" class="bg-white"></div>
+          </div>
         </div>
       </div>
+    </section>
+
+    <div class="probootstrap-home-search probootstrap-animate search-properties" id="hidden-content" >
+  <form action="" method="post">
+    <h2 class="heading">Rechercher votre nouvel habitat ici.</h2>
+    <div class="probootstrap-field-group">
+      <div class="probootstrap-fields">
+
+        <div class="search-field">
+          <i class="icon-location2"></i>
+          <input type="text" class="form-control" placeholder="Entrer une adresse">
+        </div>
+        <div class="search-category">
+          <i class="icon-chevron-down"></i>
+          <select name="#" id="" class="form-control">
+            <option value="">A vendre</option>
+            <option value="">A louer</option>
+          </select>
+        </div>
+        <div class="search-category">
+          <i class="icon-chevron-down"></i>
+          <select name="#" id="" class="form-control">
+            <option value="">Parcelle</option>
+            <option value="">Maison</option>
+            <option value="">Boutique</option>
+            <option value="">Immeuble </option>
+          </select>
+        </div>
+      </div>
+
+      <button class="btn btn-success" type="submit"><i class="icon-magnifying-glass t2"></i> Rechercher</button>
     </div>
-  </section>  
-  <div id="map"></div>
-  
-{% endblock %}
+  </form>
+  <p class="mb0 text-center soumission_info" ><small>Etes vous propriétaire d'une maison, d'une parcelle a vendre ou a louer ? <a href="{{ path('request')}}">Soumetter nous votre bien</a></small> </p>
+</div>
+  {% endblock %}
 
 {% block script %}
 {{ parent () }}

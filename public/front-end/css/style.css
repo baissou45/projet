@@ -2485,9 +2485,9 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   background: #ffffff url(../img/preloader.gif) center no-repeat;
 }
 
-.gototop {
+.gototop1 {
   position: fixed;
-  bottom: -20px;
+  bottom: 1px;
   right: 20px;
   z-index: 9999999;
   opacity: 0;
@@ -2496,13 +2496,13 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   transition: .3s all;
 }
 
-.gototop.active {
+.gototop1.active {
   opacity: 1;
   visibility: visible;
   bottom: 20px;
 }
 
-.gototop a {
+.gototop1 a {
   width: 50px;
   height: 50px;
   display: table;
@@ -2512,13 +2512,52 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
   border-radius: 4px;
 }
 
-.gototop a i {
+.gototop1 a i {
   height: 50px;
   display: table-cell;
   vertical-align: middle;
 }
 
-.gototop a:hover, .gototop a:active, .gototop a:focus {
+.gototop1 a:hover, .gototop1 a:active, .gototop1 a:focus {
+  text-decoration: none;
+  outline: none;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.gototop2 {
+  position: fixed;
+  bottom: -20px;
+  left: 20px;
+  z-index: 9999999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.gototop2.active {
+  opacity: 1;
+  visibility: visible;
+  bottom: 20px;
+}
+
+.gototop2 a {
+  width: 50px;
+  height: 50px;
+  display: table;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.gototop2 a i {
+  height: 50px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.gototop2 a:hover, .gototop2 a:active, .gototop2 a:focus {
   text-decoration: none;
   outline: none;
   background: rgba(0, 0, 0, 0.9);
@@ -2538,4 +2577,21 @@ a.hover-reverse:hover, a.hover-reverse:focus, a.hover-reverse:active {
 }
 .contact-text a{
   color: #5cb85c;
+}
+.search-properties{
+  display: none;
+  color: black;
+  background-color: black;
+
+}
+.search-properties a{
+  color: green;
+}
+
+.search-properties .heading{
+  color: black;
+  text-align: center;
+}
+.soumission_info{
+  font-size: 12px;
 }

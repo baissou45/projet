@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="front-end/css/styles-merged.css">
     <link rel="stylesheet" href="front-end/css/style.css">
     <link rel="stylesheet" href="front-end/css/custom.css">
+     <link rel = "stylesheet" href = "vendors/fancybox-master/dist/jquery.fancybox.min.css">
     {% endblock %}
 
     <!--[if lt IE 9]>
@@ -119,13 +120,19 @@
       </div>
     </div>
   </footer>
-  <div class="gototop js-top">
+  <div class="gototop1 js-top">
     <a href="#" class="js-gotop"><i class="icon-chevron-thin-up"></i></a>
+  </div>
+  <div class="gototop2 js-top">
+    <a href="#" data-fancybox data-src="#hidden-content" href="javascript:;"><i class="icon-search"></i></a>
   </div>
   {% block script %}
     <script src="front-end/js/scripts.min.js"></script>
     <script src="front-end/js/main.min.js"></script>
     <script src="front-end/js/custom.js"></script>
+
+     <script src = "vendors/fancybox-master/dist/jquery.fancybox.min.js"> </script>
+     <script src = "fancybox-master/dist/lb.js"> </script>
   {% endblock %}
 
   </body>
