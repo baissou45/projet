@@ -78,9 +78,8 @@
                                     <div class="col-sm-4 col-sm-offset-1">
                                         <div class="picture-container">
                                             <div class="picture">
-                                                <img src="assets/img/default-property.jpg" class="picture-src" id="wizardPicturePreview" title=""/>
-                                                <input type="file" id="wizard-picture" placeholder="Entrer un image de vous">
-                                                <label for="wizard-picture"></label>
+                                                <img src="" class="picture-src" id="wizardPicturePreview" title=""/>
+                                                <input type="file" id="wizard-picture">
                                             </div> 
                                         </div>
                                     </div>
@@ -168,7 +167,7 @@
                                         <div class="col-sm-3" id="nbrlot">
                                             <div class="form-group">
                                                 <label>Le nombre de lots</label>
-                                                <input id="inputnbrlot" name="superficieparcelle" type="text" class="form-control"placeholder="" title="Par exemple j'ai des chambres de type 1 chambre 1 salon et ceux de type 2 chambres 1 salon" onclick="controle">
+                                                <input id="inputnbrlot" name="superficieparcelle" type="text" class="form-control"placeholder="" title="Par exemple j'ai des chambres de type 1 chambre 1 salon et ceux de type 2 chambres 1 salon" onkeyup="controle()">
                                             </div>
                                         </div>
                                     </div>
@@ -185,246 +184,7 @@
 
                                 <div id="habitat">
 
-                                    <div  id="lot">
-                                        <h4 class="info-text">Lot no 1</h4>
-                                        <div class="row">
-                                            <div class="col-sm-12"> 
-                                                <div class="col-sm-12"> 
-                                                    <div class="form-group">
-                                                        <label>Type du lot:</label>
-                                                        <select id="typedelot" class="selectpicker show-tick form-control" data-live-search="true" data-live-search-style="begins" title="Selectionner le type de lot" onclick="controle()">
-                                                            <option>- Type -</option>
-                                                            <option>Habitation</option>
-                                                            <option>Bureau</option>
-                                                            <option>Magasin ou Boutique</option>
-                                                        </select>
-                                                    </div>
-                                                </div> 
-                                            </div>
 
-                                            <div id="habitation">
-
-                                            <div class="col-sm-12">
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label>Nombre de salons :</label>
-                                                        <input name="propertyname" type="text" class="form-control" placeholder="1">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label>Nombre de chambres :</label>
-                                                        <input name="propertyname" type="text" class="form-control" placeholder="1">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label>Nombre de douches :</label>
-                                                        <input name="propertyname" type="text" class="form-control" placeholder="1">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label>Nombre de cusines :</label>
-                                                        <input name="propertyname" type="text" class="form-control" placeholder="1">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <div class="row">
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Titre foncier
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div> 
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Sanitaire
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>                                                 
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Carrolé
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>                                                 
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Véranda
-                                                                </label>
-                                                            </div>
-                                                        </div>
-
-                                                    </div> 
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Co-location
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div> 
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Garage
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>                                                 
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Compteur personnel
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>                                                 
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Compteur prépéyé
-                                                                </label>
-                                                            </div>
-                                                        </div>
-
-                                                    </div> 
-                                                </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div id="bureau">
-                                                <div class="col-sm-12">
-                                                    <div class="col-sm-3">
-                                                        <div class="form-group">
-                                                            <label>Nombre de pieces :</label>
-                                                            <input name="propertyname" type="text" class="form-control" placeholder="1">
-                                                        </div>
-                                                    </div>
-                                                
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Toilettes
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div> 
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Sanitaires
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>                                                 
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Cables data
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>                                                 
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Compteur prépéyé
-                                                                </label>
-                                                            </div>
-                                                        </div>
-
-                                                    </div> 
-                                                </div>
-                                            </div>
-
-                                            <div id="boutique">
-                                                <div class="col-sm-12">
-                                                    <div class="col-sm-3">
-                                                        <div class="form-group">
-                                                            <label>Nombre de pieces :</label>
-                                                            <input name="propertyname" type="text" class="form-control" placeholder="1">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <div class="form-group">
-                                                            <label>Capacité de stockage pour magasin :</label>
-                                                            <input name="propertyname" type="text" class="form-control" placeholder="1">
-                                                        </div>
-                                                    </div>
-                                                
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Toilettes
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div> 
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Sanitaires
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>                                                 
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Cables data
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>                                                 
-                                                    <div class="col-sm-2">
-                                                        <div class="form-group">
-                                                            <div class="checkbox">
-                                                                <label>
-                                                                    <input type="checkbox"> Compteur prépéyé
-                                                                </label>
-                                                            </div>
-                                                        </div>
-
-                                                    </div> 
-                                                </div>
-                                            </div>
-
-                                            <br>
-                                        </div>
-                                    </div>
                                 </div>
                                 <!--    <div class="col-sm-9 padding-top-15">                                                   
                                         <div class="col-sm-4">
@@ -543,71 +303,28 @@
                                         <div class="col-sm-3" id="superficieparcelle">
                                             <div class="form-group">
                                                 <label>La superficie de la parcelle(en m2)</label>
-                                                <input id="inputsuperficieparcelle" name="superficieparcelle" type="text" class="form-control"placeholder="" onclick="controle">
+                                                <input id="inputsuperficieparcelle" name="superficieparcelle" type="text" class="form-control" placeholder="" id="parcellesuperficie">
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="row">
                                         <div class="col-sm-2">
                                             <div class="form-group">
                                                 <div class="checkbox">
                                                     <label>
-                                                        <input type="checkbox"> Titre foncier
+                                                        <input type="checkbox" id="parcelletitrefoncier"> Titre foncier
                                                     </label>
                                                 </div>
                                             </div>
-                                        </div> 
-                                        <div class="col-sm-2">
-                                            <div class="form-group">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> Loti
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>                                                 
-                                        <div class="col-sm-2">
-                                            <div class="form-group">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> Recasée
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>                                                 
-                                        <div class="col-sm-2">
-                                            <div class="form-group">
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox"> Légal
-                                                    </label>
-                                                </div>
-                                            </div>
-
-                                        </div> 
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-4"> 
+                                        </div>
+                                        <div class="col-sm-3"> 
                                             <div class="form-group">
                                                 <label for="property-images">Choisir une image:</label>
-                                                <input class="form-control" type="file" id="property-images">
+                                                <input class="form-control" type="file" id="parcelleimage">
                                             </div>
                                         </div>
                                     </div>
                                 </div> 
                                 
-                                <div id="choix_image">                                  
-                                    <div class="row">  
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <label for="property-images">Choisir une image:</label>
-                                                <input class="form-control" type="file" id="property-images">
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div> 
+                                
 
                             </div>
 
@@ -623,7 +340,7 @@
                                         <div class="">
                                             <p>
                                                 <label><strong>Condition légales</strong></label>
-                                                Vous accepter qua des fins de fonctionnement Immo se servira de vis infimation personnelles et relatives a votre propriété précédement entrées.
+                                                Vous accepter qu'a des fins de fonctionnement, Immo se servira de vos infimations d'dentification personnelles et celles relatives a votre propriété.
                                             </p>
 
                                             <div class="checkbox">
@@ -642,7 +359,7 @@
 
                         <div class="wizard-footer">
                             <div class="pull-right">
-                                <input type='button' " class='btn btn-next btn-success' name='next' value='Suivant' />
+                                <input type='button'  class='btn btn-next btn-success' name='next' value='Suivant' />
                                 <input type='button' class='btn btn-finish btn-success ' name='Fin' value='Fin' />
                             </div>
 
@@ -692,82 +409,343 @@
 </form>
 <p class="mb0 text-center soumission_info" ><small>Etes vous propriétaire d'une maison, d'une parcelle a vendre ou a louer ? <a href="{{ path('request')}}">Soumetter nous votre bien</a></small> </p>
 </div>
+
+
+<div id="lot" >
+    <h4 class="info-text">Lot no 1</h4>
+    <div class="row">
+        <div class="col-sm-12"> 
+            <div class="col-sm-12"> 
+                <div class="form-group">
+                    <label>Type du lot:</label>
+                    <select id="typedelot" class="selectpicker show-tick form-control" data-live-search="true" data-live-search-style="begins" title="Selectionner le type de lot" onclick="controle()">
+                        <option>- Type -</option>
+                        <option>Habitation</option>
+                        <option>Bureau</option>
+                        <option>Magasin ou Boutique</option>
+                    </select>
+                </div>
+            </div> 
+        </div>
+
+        <div id="habitation">
+
+            <div class="col-sm-12">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label>Quantité:</label>
+                        <input name="propertyname" type="text" class="form-control" placeholder="1" id="habitatquantite">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label>Nombre de salons :</label>
+                        <input name="propertyname" type="text" class="form-control" placeholder="1" id="habitatnombredesalons">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label>Nombre de chambres :</label>
+                        <input name="propertyname" type="text" class="form-control" placeholder="1" id="habitatnombredechambres">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label>Nombre de douches :</label>
+                        <input name="propertyname" type="text" class="form-control" placeholder="1" id="habitatnombrededouches">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label>Nombre de cusines :</label>
+                        <input name="propertyname" type="text" class="form-control" placeholder="1" id="habitatnombredecusines">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="habitatsanitaire"> Sanitaire
+                                </label>
+                            </div>
+                        </div>
+                    </div>                                     
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="habitatveranda"> Véranda
+                                </label>
+                            </div>
+                        </div>
+
+                    </div> 
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="habitatgarage"> Garage
+                                </label>
+                            </div>
+                        </div>
+                    </div>                                                 
+                    <div class="col-sm-2">
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="habitatmeuble"> Meublé
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="bureau">
+            <div class="col-sm-12">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label>Quantité :</label>
+                        <input name="propertyname" type="text" class="form-control" placeholder="1" id="bureaunquantite">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label>Nombre de pièces :</label>
+                        <input name="propertyname" type="text" class="form-control" placeholder="1" id="bureaunombredepieces">
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label>Superficie totale :</label>
+                        <input name="propertyname" type="text" class="form-control" placeholder="1" id="bureaunombredepieces">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="bureautoilettes"> Toilettes
+                            </label>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="bureausanitaire"> Sanitaire
+                            </label>
+                        </div>
+                    </div>
+                </div>                                                 
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="bureaucablesdata">Cables data
+                            </label>
+                        </div>
+                    </div>
+                </div>                                                 
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="bureaumeuble">Meublé
+                            </label>
+                        </div>
+                    </div>
+
+                </div> 
+            </div>
+        </div>
+
+        <div id="boutique">
+            <div class="col-sm-12">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label>Quantité :</label>
+                        <input name="propertyname" type="text" class="form-control" placeholder="1" id="boutiquequantite">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label>Nombre de pièces :</label>
+                        <input name="propertyname" type="text" class="form-control" placeholder="1" id="boutiquenombredepieces">
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <label>Superficie :</label>
+                        <input name="propertyname" type="text" class="form-control" placeholder="1" id="boutiquesuperficie">
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="boutiquetoilettes"> Toilettes
+                            </label>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-sm-2">
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="boutiquesanitaire"> Sanitaire
+                            </label>
+                        </div>
+                    </div>
+                </div>                                          
+            </div>
+        </div>
+
+        <br>
+    </div>
+    <div id="lotimage">                                  
+        <div class="row">  
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="property-images">Choisir une image:</label>
+                    <input class="form-control" type="file" id="property-images">
+                </div>
+            </div>
+
+        </div>
+    </div> 
+</div>
+
+
 {% endblock %}
 {% block script %}
 {{ parent () }}
 <script>
-     
-    document.getElementById('nbrlot').style.display = 'none';
-    document.getElementById('choix_image').style.display = 'none';
-    document.getElementById('habitat').style.display = 'none';
-    document.getElementById('caracteristique_parcelle').style.display = 'none';
-    document.getElementById('habitat').style.display = 'none';
-    document.getElementById('habitation').style.display = 'none';
-    document.getElementById('bureau').style.display = 'none';
-    document.getElementById('boutique').style.display = 'none';
-    document.getElementById('lot').style.display = 'block';
+    function duplic(element,i)
+    {
+     clone = document.getElementById(element).cloneNode(true);
+     clone.style.display='block';
+     clone.getElementById('habitatquantite').name = 'lot'+ i+'habitatquantite';
+     var clona=clone.getElementById('habitatquantite').name;
+     clone.getElementById('habitatnombredesalons').name = 'lot'+i+'habitatnombredesalons';
+     clone.getElementById('habitatnombredechambres').name = 'lot'+i+'habitatnombredechambres';
+     clone.getElementById('habitatnombrededouches').name = 'lot'+i+'habitatnombrededouches';
+     clone.getElementById('habitatnombredecusines').name = 'lot'+i+'habitatnombredecusines';
+     clone.getElementById('habitatsanitaire').name = 'lot'+i+'habitatsanitaire';
+     clone.getElementById('habitatveranda').name = 'lot'+i+'habitatveranda';
+     clone.getElementById('habitatgarage').name = 'lot'+i+'habitatgarage';
+     clone.getElementById('habitatmeuble').name = 'lot'+i+'habitatmeuble';
+     clone.getElementById('bureaunquantite').name = 'lot'+i+'bureaunquantite';
+     clone.getElementById('bureaunombredepieces').name = 'lot'+i+'bureaunombredepieces';
+     clone.getElementById('bureautoilettes').name = 'lot'+i+'bureautoilettes';
+     clone.getElementById('bureausanitaire').name = 'lot'+i+'bureausanitaire';
+     clone.getElementById('bureaucablesdata').name = 'lot'+i+'_';
+     clone.getElementById('bureaumeuble').name = 'lot'+i+'bureaucablesdata';
+     clone.getElementById('boutiquequantite').name = 'lot'+i+'boutiquequantite';
+     clone.getElementById('boutiquenombredepieces').name = 'lot'+i+'boutiquenombredepieces';
+     clone.getElementById('boutiquesuperficie').name = 'lot'+i+'boutiquesuperficie';
+     clone.getElementById('boutiquetoilettes').name = 'lot'+i+'boutiquetoilettes';
+     clone.getElementById('boutiquesanitaire').name = 'lot'+i+'boutiquesanitaire';
+     document.getElementById('habitat').appendChild (clone);
+ }
+   /* 
+       function duplic(element)
+    {
+     clone = document.getElementById(lot).cloneNode(true);
+     clone.name = lot + '_' + i;
+ }
+clone = document.getElementById("lot").cloneNode(true);
+clone.id = "test";
+clone.style.display = "float: left";
+clone.style.color = "#FF0000";
+...
+document.getElementById("nouveau_devis_piece").appendChild (clone); */
+
+document.getElementById('nbrlot').style.display = 'none';
+document.getElementById('lotimage').style.display = 'none';
+document.getElementById('habitat').style.display = 'none';
+document.getElementById('caracteristique_parcelle').style.display = 'none';
+document.getElementById('habitat').style.display = 'none';
+document.getElementById('habitation').style.display = 'none';
+document.getElementById('bureau').style.display = 'none';
+document.getElementById('boutique').style.display = 'none';
+document.getElementById('lot').style.display = 'none';
 
 
-    function controle() {
+function controle() {
 
 
-        var typedebiens = document.getElementById('basic').value;
+    var typedebiens = document.getElementById('basic').value;
 
-        var nombredelot = parseInt(document.getElementById('inputnbrlot').value);
+    var nombredelot = parseInt(document.getElementById('inputnbrlot').value);
 
-        if (typedebiens=="Parcelle")
-        {
-            document.getElementById('nbrlot').style.display = 'none';
-            document.getElementById('caracteristique_parcelle').style.display = 'block';
-            document.getElementById('habitat').style.display = 'none';
-        }
-        else if (typedebiens=="Batis") 
-        {
-           
-
-            document.getElementById('nbrlot').style.display = 'block';
-            document.getElementById('caracteristique_parcelle').style.display = 'none';
-            document.getElementById('habitat').style.display = 'block';
-
-
-             for (var i = 0; i < nombredelot; i++) {
-                $(function() {
-                $('#habitat').append($('#lots'));
-                }); 
-                
-            }
-
-            
-            if (document.getElementById('typedelot').value =="Habitation") {
-                document.getElementById('habitation').style.display = 'block';
-                document.getElementById('bureau').style.display = 'none';
-                document.getElementById('boutique').style.display = 'none';
-            }
-            else if (document.getElementById('typedelot').value=="Bureau") {
-                document.getElementById('habitation').style.display = 'none';
-                document.getElementById('bureau').style.display = 'block';
-                document.getElementById('boutique').style.display = 'none';
-            }
-            else if (document.getElementById('typedelot').value=="Magasin ou Boutique") {
-                document.getElementById('habitation').style.display = 'none';
-                document.getElementById('bureau').style.display = 'none';
-                document.getElementById('boutique').style.display = 'block';
-            }
-            else{
-                document.getElementById('habitation').style.display = 'none';
-                document.getElementById('bureau').style.display = 'none';
-                document.getElementById('boutique').style.display = 'none';
-            }
-        }
-
-        else{
-            document.getElementById('nbrlot').style.display = 'none';
-            document.getElementById('choix_image').style.display = 'none';
-            document.getElementById('caracteristique_parcelle').style.display = 'none';
-            document.getElementById('habitat').style.display = 'none';
-        }
-
+    if (typedebiens=="Parcelle")
+    {
+        document.getElementById('nbrlot').style.display = 'none';
+        document.getElementById('caracteristique_parcelle').style.display = 'block';
+        document.getElementById('habitat').style.display = 'none';
     }
+    else if (typedebiens=="Batis") 
+    {
+
+
+        document.getElementById('nbrlot').style.display = 'block';
+        document.getElementById('caracteristique_parcelle').style.display = 'none';
+        document.getElementById('habitat').style.display = 'block';
+
+        for (var i = 1; i < nombredelot+1; i++) {
+            alert(nombredelot);
+            duplic('lot',i);
+        }
+
+
+        if (document.getElementById('typedelot').value =="Habitation") {
+            document.getElementById('habitation').style.display = 'block';
+            document.getElementById('bureau').style.display = 'none';
+            document.getElementById('boutique').style.display = 'none';
+            document.getElementById('lotimage').style.display = 'block';
+        }
+        else if (document.getElementById('typedelot').value=="Bureau") {
+            document.getElementById('habitation').style.display = 'none';
+            document.getElementById('bureau').style.display = 'block';
+            document.getElementById('boutique').style.display = 'none';
+            document.getElementById('lotimage').style.display = 'block';
+        }
+        else if (document.getElementById('typedelot').value=="Magasin ou Boutique") {
+            document.getElementById('habitation').style.display = 'none';
+            document.getElementById('bureau').style.display = 'none';
+            document.getElementById('boutique').style.display = 'block';
+            document.getElementById('lotimage').style.display = 'block';
+        }
+        else{
+            document.getElementById('habitation').style.display = 'none';
+            document.getElementById('bureau').style.display = 'none';
+            document.getElementById('boutique').style.display = 'none';
+            document.getElementById('lotimage').style.display = 'none';
+        }
+    }
+
+    else{
+        document.getElementById('nbrlot').style.display = 'none';
+        document.getElementById('caracteristique_parcelle').style.display = 'none';
+        document.getElementById('habitat').style.display = 'none';
+    }
+
+}
 </script>
 <script src="front-end/submit/assets/js/vendor/modernizr-2.6.2.min.js"></script>
 <script src="front-end/submit/bootstrap/js/bootstrap.min.js"></script>

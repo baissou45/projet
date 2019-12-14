@@ -31,14 +31,9 @@
 
         <nav role="navigation" class="probootstrap-nav hidden-xs">
           <ul class="probootstrap-main-nav">
-<<<<<<< HEAD
+
             <li {% if app.request.attributes.get('_route') == "visit" %} class="active" {% endif %}><a href="{{ path('visit')}}">Acceuil</a></li>
             <li {% if app.request.attributes.get('_route') == "properties" or app.request.attributes.get('_route') == "view" %} class="active" {% endif %}><a href="{{ path('properties')}}">Catalogue</a></li>
-=======
-            <li {% endblock %} class="active" ><a href="index.html">Acceuil</a></li>
-            <li><a href="properties.html">A vendre</a></li>
-            <li><a href="properties.html">A louer</a></li>
->>>>>>> test2baïss
             <span class="pull-right">
               <li {% if app.request.attributes.get('_route') == "request" %} class="active" {% endif %}><a href="{{ path('request')}}">Soumettre un bien </a></li>
               <li {% if app.request.attributes.get('_route') == "contact" %} class="active" {% endif %}><a href="{{ path('contact')}}">Contact</a></li>
