@@ -4,6 +4,11 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Contact;
+use App\Form\ContactType;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
+
 
 class VisitController extends AbstractController
 {
@@ -38,8 +43,18 @@ class VisitController extends AbstractController
     /**
      * @Route("/contact", name="contact")
      */
-    public function contact()
+    public function contact(Request $request)
+
     {
-        return $this->render('visit/contact.html.twig');
+        $contact=new Contact ();
+        $form= $this->createForm(ContactType::Class, $contact);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager(); // On récupère l'entity manager
+            $em->persist($contact); // On confie notre entité à l'entity manager (on persist l'entité)
+            $em->flush(); // On execute la requete        
+        }
+
+        return $this->render('visit/contact.html.twig',['form' => $form->createView()]);
     }
 }

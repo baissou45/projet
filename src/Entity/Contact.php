@@ -2,90 +2,95 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
- */
+* @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
+*/
 class Contact
 {
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
-    private $id;
+/**
+ * @ORM\Id()
+ * @ORM\GeneratedValue()
+ * @ORM\Column(type="integer")
+ */
+private $id;
+/**
+ * @Assert\NotBlank(message="Ce champ ne peut pas etre vide.")
+ * @ORM\Column(type="string", length=255)
+ */
+private $Nom;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Nom;
+/**
+ * @Assert\NotBlank(message="Ce champ ne peut pas etre vide.")
+ * @ORM\Column(type="string", length=255)
+ */
+private $Objet;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Objet;
+/**
+ * @Assert\NotBlank(message="Ce champ ne peut pas etre vide.")
+ * @ORM\Column(type="string", length=255)
+ */
+private $Email;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Email;
+/**
+ * @Assert\NotBlank(message="Ce champ ne peut pas etre vide.")
+ * @ORM\Column(type="string", length=255)
+ */
+private $Message;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Message;
+public function getId(): ?int
+{
+    return $this->id;
+}
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+public function getNom(): ?string
+{
+    return $this->Nom;
+}
 
-    public function getNom(): ?string
-    {
-        return $this->Nom;
-    }
+public function setNom(string $Nom): self
+{
+    $this->Nom = $Nom;
 
-    public function setNom(string $Nom): self
-    {
-        $this->Nom = $Nom;
+    return $this;
+}
 
-        return $this;
-    }
+public function getObjet(): ?string
+{
+    return $this->Objet;
+}
 
-    public function getObjet(): ?string
-    {
-        return $this->Objet;
-    }
+public function setObjet(string $Objet): self
+{
+    $this->Objet = $Objet;
 
-    public function setObjet(string $Objet): self
-    {
-        $this->Objet = $Objet;
+    return $this;
+}
 
-        return $this;
-    }
+public function getEmail(): ?string
+{
+    return $this->Email;
+}
 
-    public function getEmail(): ?string
-    {
-        return $this->Email;
-    }
+public function setEmail(string $Email): self
+{
+    $this->Email = $Email;
 
-    public function setEmail(string $Email): self
-    {
-        $this->Email = $Email;
+    return $this;
+}
 
-        return $this;
-    }
+public function getMessage(): ?string
+{
+    return $this->Message;
+}
 
-    public function getMessage(): ?string
-    {
-        return $this->Message;
-    }
+public function setMessage(string $Message): self
+{
+    $this->Message = $Message;
 
-    public function setMessage(string $Message): self
-    {
-        $this->Message = $Message;
-
-        return $this;
-    }
+    return $this;
+}
 }
