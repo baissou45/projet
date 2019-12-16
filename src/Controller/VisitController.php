@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Contact;
 use App\Form\ContactType;
+use App\Entity\Reservation;
+use App\Form\ReservationType;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -29,9 +31,22 @@ class VisitController extends AbstractController
     /**
      * @Route("/view", name="view")
      */
-    public function view()
+    public function view(Request $request)
     {
-        return $this->render('visit/view.html.twig');
+        $reservation=new Reservation ();
+        $form= $this->createForm(ReservationType::Class, $reservation);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $reservation->setDate(new \DateTime());
+            $em = $this->getDoctrine()->getManager(); // On récupère l'entity manager
+            $em->persist($reservation); // On confie notre entité à l'entity manager (on persist l'entité)
+            $em->flush(); // On execute la requete  
+            $this->addFlash(
+                'success','Votre message a été envoyé.'
+            );      
+        }
+
+        return $this->render('visit/view.html.twig',['form' => $form->createView()]);
     }
     /**
      * @Route("/request", name="request")
@@ -52,7 +67,10 @@ class VisitController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager(); // On récupère l'entity manager
             $em->persist($contact); // On confie notre entité à l'entity manager (on persist l'entité)
-            $em->flush(); // On execute la requete        
+            $em->flush(); // On execute la requete  
+            $this->addFlash(
+                'success','Votre message a été envoyé.'
+            );      
         }
 
         return $this->render('visit/contact.html.twig',['form' => $form->createView()]);

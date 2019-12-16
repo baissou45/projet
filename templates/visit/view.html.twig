@@ -1,619 +1,638 @@
-    {% extends 'visiteur-base.html.twig' %}
-    {% block stylesheets %} 
-    {{ parent () }}
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+{% extends 'visiteur-base.html.twig' %}
+{% block stylesheets %} 
+{{ parent () }}
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="front-end/view/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="front-end/view/css/animate.css">
-    
-    <link rel="stylesheet" href="front-end/view/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="front-end/view/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="front-end/view/css/magnific-popup.css">
+<link rel="stylesheet" href="front-end/view/css/open-iconic-bootstrap.min.css">
+<link rel="stylesheet" href="front-end/view/css/animate.css">
 
-    <link rel="stylesheet" href="front-end/view/css/aos.css">
+<link rel="stylesheet" href="front-end/view/css/owl.carousel.min.css">
+<link rel="stylesheet" href="front-end/view/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="front-end/view/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="front-end/view/css/ionicons.min.css">
+<link rel="stylesheet" href="front-end/view/css/aos.css">
 
-    <link rel="stylesheet" href="front-end/view/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="front-end/view/css/jquery.timepicker.css">
+<link rel="stylesheet" href="front-end/view/css/ionicons.min.css">
 
-    
-    <link rel="stylesheet" href="front-end/view/css/flaticon.css">
-    <link rel="stylesheet" href="front-end/view/css/icomoon.css">
-    <link rel="stylesheet" href="front-end/view/css/style.css">
-
-    {% endblock %}
-    {% block title %}Voir le bien - {{ parent () }}{% endblock %}
-    {% block content %}
+<link rel="stylesheet" href="front-end/view/css/bootstrap-datepicker.css">
+<link rel="stylesheet" href="front-end/view/css/jquery.timepicker.css">
 
 
-    <section class="ftco-section ftco-property-details">
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="property-details">
-                    <div class="col-md-12 text-center " style="margin: auto;">
-                        <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
-                            <img src="front-end/view/images/work-1.jpg" alt="Image 4" />
-                        </a>
-                        
-                    </div>
-                    <div class="text text-center">
-                        <span class="subheading">Zogbadjè, Abomey-Calavi</span>
-                        <h2>2 Chambres 1 Salon</h2>
-                        <span class="subheading">125 000 FCFA  <small>/mois</small> </span>
-                         <a data-fancybox data-src="#hidden-content" href="javascript:;"> Ce que vous chercher</a>
-                    </div>
+<link rel="stylesheet" href="front-end/view/css/flaticon.css">
+<link rel="stylesheet" href="front-end/view/css/icomoon.css">
+<link rel="stylesheet" href="front-end/view/css/style.css">
+
+{% endblock %}
+{% block title %}Voir le bien - {{ parent () }}{% endblock %}
+{% block content %}
+
+<div class="probootstrap-home-search probootstrap-animate search-properties" id="hidden-content" >
+<form action="" method="post">
+<h2 class="heading">Rechercher votre nouvel habitat ici.</h2>
+<div class="probootstrap-field-group">
+  <div class="probootstrap-fields">
+
+    <div class="search-field">
+      <i class="icon-location2"></i>
+      <input type="text" class="form-control" placeholder="Entrer une adresse">
+    </div>
+    <div class="search-category">
+      <i class="icon-chevron-down"></i>
+      <select name="#" id="" class="form-control">
+        <option value="">A vendre</option>
+        <option value="">A louer</option>
+      </select>
+    </div>
+    <div class="search-category">
+      <i class="icon-chevron-down"></i>
+      <select name="#" id="" class="form-control">
+        <option value="">Parcelle</option>
+        <option value="">Maison</option>
+        <option value="">Boutique</option>
+        <option value="">Immeuble </option>
+      </select>
+    </div>
+  </div>
+
+  <button class="btn btn-success" type="submit"><i class="icon-magnifying-glass t2"></i> Rechercher</button>
+</div>
+</form>
+<p class="mb0 text-center soumission_info" ><small>Etes vous propriétaire d'une maison, d'une parcelle a vendre ou a louer ? <a href="{{ path('request')}}">Soumetter nous votre bien</a></small> </p>
+</div>
+<section class="ftco-section ftco-property-details">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="property-details">
+                <div class="col-md-12 text-center " style="margin: auto;">
+                    <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
+                        <img src="front-end/view/images/work-1.jpg" alt="Image 4" />
+                    </a>
+                    
+                </div>
+                <div class="text text-center">
+                    <span class="subheading">Zogbadjè, Abomey-Calavi</span>
+                    <h2>2 Chambres 1 Salon</h2>
+                    <span class="subheading">125 000 FCFA  <small>/mois</small> </span>
+                     <a  href=""> A vendre</a>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12 pills">
-                <div class="bd-example bd-example-tabs">
-                    <div class="d-flex justify-content-center">
-                      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    </div>
+    <div class="row">
+        <div class="col-md-12 pills">
+            <div class="bd-example bd-example-tabs">
+                <div class="d-flex justify-content-center">
+                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 
-                        <li class="nav-item">
-                          <a class="nav-link active" id="pills-description-tab" data-toggle="pill" href="#pills-description" role="tab" aria-controls="pills-description" aria-expanded="true" onclick="true">Caractéristiques</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" id="pills-manufacturer-tab" data-toggle="pill" href="#pills-manufacturer" role="tab" aria-controls="pills-manufacturer" aria-expanded="true">Description</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" id="pills-review-tab" data-toggle="pill" href="#pills-review" role="tab" aria-controls="pills-review" aria-expanded="true">Galerie</a>
-                      </li>
-                  </ul>
-              </div>
+                    <li class="nav-item">
+                      <a class="nav-link active" id="pills-description-tab" data-toggle="pill" href="#pills-description" role="tab" aria-controls="pills-description" aria-expanded="true" onclick="true">Caractéristiques</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" id="pills-manufacturer-tab" data-toggle="pill" href="#pills-manufacturer" role="tab" aria-controls="pills-manufacturer" aria-expanded="true">Description</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" id="pills-review-tab" data-toggle="pill" href="#pills-review" role="tab" aria-controls="pills-review" aria-expanded="true">Galerie</a>
+                  </li>
+              </ul>
+          </div>
 
-              <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <ul class="features" style="background-color: #DCDCDC;">
-                                <li class="check"><span class="ion-ios-checkmark"></span>Lot Area: 1,250 SQ FT</li>
-                                <li class="check"><span class="ion-ios-checkmark"></span>Bed Rooms: 4</li>
-                                <li class="check"><span class="ion-ios-checkmark"></span>Bath Rooms: 4</li>
-                                <li class="check"><span class="ion-ios-checkmark"></span>Luggage</li>
-                                <li class="check"><span class="ion-ios-checkmark"></span>Garage: 2</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <ul class="features">
-                                <li class="check"><span class="ion-ios-checkmark"></span>Floor Area: 1,300 SQ FT</li>
-                                <li class="check"><span class="ion-ios-checkmark"></span>Year Build:: 2019</li>
-                                <li class="check"><span class="ion-ios-checkmark"></span>Water</li>
-                                <li class="check"><span class="ion-ios-checkmark"></span>Stories: 2</li>
-                                <li class="check"><span class="ion-ios-checkmark"></span>Roofing: New</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <ul class="features">
-                                <li class="check"><span class="ion-ios-checkmark"></span>Floor Area: 1,300 SQ FT</li>
-                                <li class="check"><span class="ion-ios-checkmark"></span>Year Build:: 2019</li>
-                                <li class="check"><span class="ion-ios-checkmark"></span>Water</li>
-                                <li class="check"><span class="ion-ios-checkmark"></span>Stories: 2</li>
-                                <li class="check"><span class="ion-ios-checkmark"></span>Roofing: New</li>
-                            </ul>
-                        </div>
-
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="features" style="background-color: #DCDCDC;">
+                            <li class="check"><span class="ion-ios-checkmark"></span>Lot Area: 1,250 SQ FT</li>
+                            <li class="check"><span class="ion-ios-checkmark"></span>Bed Rooms: 4</li>
+                            <li class="check"><span class="ion-ios-checkmark"></span>Bath Rooms: 4</li>
+                            <li class="check"><span class="ion-ios-checkmark"></span>Luggage</li>
+                            <li class="check"><span class="ion-ios-checkmark"></span>Garage: 2</li>
+                        </ul>
                     </div>
-                    <br>
-                    
-                    
+                    <div class="col-md-4">
+                        <ul class="features">
+                            <li class="check"><span class="ion-ios-checkmark"></span>Floor Area: 1,300 SQ FT</li>
+                            <li class="check"><span class="ion-ios-checkmark"></span>Year Build:: 2019</li>
+                            <li class="check"><span class="ion-ios-checkmark"></span>Water</li>
+                            <li class="check"><span class="ion-ios-checkmark"></span>Stories: 2</li>
+                            <li class="check"><span class="ion-ios-checkmark"></span>Roofing: New</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="features">
+                            <li class="check"><span class="ion-ios-checkmark"></span>Floor Area: 1,300 SQ FT</li>
+                            <li class="check"><span class="ion-ios-checkmark"></span>Year Build:: 2019</li>
+                            <li class="check"><span class="ion-ios-checkmark"></span>Water</li>
+                            <li class="check"><span class="ion-ios-checkmark"></span>Stories: 2</li>
+                            <li class="check"><span class="ion-ios-checkmark"></span>Roofing: New</li>
+                        </ul>
+                    </div>
+
+
                 </div>
+                <br>
+                
+                
+            </div>
 
-                <div class="tab-pane fade" id="pills-manufacturer" role="tabpanel" aria-labelledby="pills-manufacturer-tab">
-                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                  <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
-              </div>
+            <div class="tab-pane fade" id="pills-manufacturer" role="tabpanel" aria-labelledby="pills-manufacturer-tab">
+              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+              <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+          </div>
 
-              <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
-                  <div class="row">
-                    <div class="col-md-12">
-                        <small>Cliquer sur une image pour accéder a la galerie complete</small>
-                        <h3 class="head">23 Images</h3>
-                        
-                        <div class="container">   
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
-                                        <img src="front-end/view/images/work-1.jpg" alt="Image 1" />
-                                    </a>
-                                </div>
-                                
-                                <div class="col-md-3">
-                                    <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
-                                        <img src="front-end/view/images/work-1.jpg" alt="Image 2" />
-                                    </a>
-                                </div>
-                                
-                                <div class="col-md-3 col-sm-2">
-                                    <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
-                                        <img src="front-end/view/images/work-1.jpg" alt="Image 3"  />
-                                    </a>
-                                </div>
-                                
-                                <div class="col-md-3 col-sm-2">
-                                    <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
-                                        <img src="front-end/view/images/work-1.jpg" alt="Image 4" />
-                                    </a>
-                                </div>
-                                <div class="col-md-3 col-sm-2">
-                                    <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
-                                        <img src="front-end/view/images/work-1.jpg" alt="Image 1" />
-                                    </a>
-                                </div>
-                                
-                                <div class="col-md-3 col-sm-2">
-                                    <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
-                                        <img src="front-end/view/images/work-1.jpg" alt="Image 2" />
-                                    </a>
-                                </div>
-                                
-                                <div class="col-md-3 col-sm-2">
-                                    <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
-                                        <img src="front-end/view/images/work-1.jpg" alt="Image 3" />
-                                    </a>
-                                </div>
-                                
-                                <div class="col-md-3 col-sm-2">
-                                    <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
-                                        <img src="front-end/view/images/work-1.jpg" alt="Image 4" />
-                                    </a>
-                                </div>
+          <div class="tab-pane fade" id="pills-review" role="tabpanel" aria-labelledby="pills-review-tab">
+              <div class="row">
+                <div class="col-md-12">
+                    <small>Cliquer sur une image pour accéder a la galerie complete</small>
+                    <h3 class="head">23 Images</h3>
+                    
+                    <div class="container">   
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
+                                    <img src="front-end/view/images/work-1.jpg" alt="Image 1" />
+                                </a>
+                            </div>
+                            
+                            <div class="col-md-3">
+                                <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
+                                    <img src="front-end/view/images/work-1.jpg" alt="Image 2" />
+                                </a>
+                            </div>
+                            
+                            <div class="col-md-3 col-sm-2">
+                                <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
+                                    <img src="front-end/view/images/work-1.jpg" alt="Image 3"  />
+                                </a>
+                            </div>
+                            
+                            <div class="col-md-3 col-sm-2">
+                                <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
+                                    <img src="front-end/view/images/work-1.jpg" alt="Image 4" />
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-sm-2">
+                                <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
+                                    <img src="front-end/view/images/work-1.jpg" alt="Image 1" />
+                                </a>
+                            </div>
+                            
+                            <div class="col-md-3 col-sm-2">
+                                <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
+                                    <img src="front-end/view/images/work-1.jpg" alt="Image 2" />
+                                </a>
+                            </div>
+                            
+                            <div class="col-md-3 col-sm-2">
+                                <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
+                                    <img src="front-end/view/images/work-1.jpg" alt="Image 3" />
+                                </a>
+                            </div>
+                            
+                            <div class="col-md-3 col-sm-2">
+                                <a href="front-end/view/images/work-1.jpg" data-fancybox="gallery" data-caption="Caption #1" class="thumbnail">
+                                    <img src="front-end/view/images/work-1.jpg" alt="Image 4" />
+                                </a>
                             </div>
                         </div>
+                    </div>
 
-                        
-                        
+                    
+                    
 
-                                        <!--    <div class="review d-flex">
-                                                <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
-                                                <div class="desc">
-                                                    <h4>
-                                                        <span class="text-left">Jacob Webb</span>
-                                                        <span class="text-right">14 March 2018</span>
-                                                    </h4>
-                                                    <p class="star">
-                                                        <span>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                        </span>
-                                                        <span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
-                                                    </p>
-                                                    <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
-                                                </div>
-                                            </div>
-                                            <div class="review d-flex">
-                                                <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
-                                                <div class="desc">
-                                                    <h4>
-                                                        <span class="text-left">Jacob Webb</span>
-                                                        <span class="text-right">14 March 2018</span>
-                                                    </h4>
-                                                    <p class="star">
-                                                        <span>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                        </span>
-                                                        <span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
-                                                    </p>
-                                                    <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
-                                                </div>
-                                            </div>
-                                            <div class="review d-flex">
-                                                <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
-                                                <div class="desc">
-                                                    <h4>
-                                                        <span class="text-left">Jacob Webb</span>
-                                                        <span class="text-right">14 March 2018</span>
-                                                    </h4>
-                                                    <p class="star">
-                                                        <span>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                        </span>
-                                                        <span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
-                                                    </p>
-                                                    <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
-                                                </div>
+                                    <!--    <div class="review d-flex">
+                                            <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                                            <div class="desc">
+                                                <h4>
+                                                    <span class="text-left">Jacob Webb</span>
+                                                    <span class="text-right">14 March 2018</span>
+                                                </h4>
+                                                <p class="star">
+                                                    <span>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                    </span>
+                                                    <span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+                                                </p>
+                                                <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-5">
-                                            <div class="rating-wrap">
-                                                <h3 class="head">Give a Review</h3>
-                                                <div class="wrap">
-                                                    <p class="star">
-                                                        <span>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            (98%)
-                                                        </span>
-                                                        <span>20 Reviews</span>
-                                                    </p>
-                                                    <p class="star">
-                                                        <span>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            (85%)
-                                                        </span>
-                                                        <span>10 Reviews</span>
-                                                    </p>
-                                                    <p class="star">
-                                                        <span>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            (70%)
-                                                        </span>
-                                                        <span>5 Reviews</span>
-                                                    </p>
-                                                    <p class="star">
-                                                        <span>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            (10%)
-                                                        </span>
-                                                        <span>0 Reviews</span>
-                                                    </p>
-                                                    <p class="star">
-                                                        <span>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            <i class="ion-ios-star"></i>
-                                                            (0%)
-                                                        </span>
-                                                        <span>0 Reviews</span>
-                                                    </p>
-                                                </div>
-                                            </div> !-->
+                                        <div class="review d-flex">
+                                            <div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                                            <div class="desc">
+                                                <h4>
+                                                    <span class="text-left">Jacob Webb</span>
+                                                    <span class="text-right">14 March 2018</span>
+                                                </h4>
+                                                <p class="star">
+                                                    <span>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                    </span>
+                                                    <span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+                                                </p>
+                                                <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+                                            </div>
                                         </div>
+                                        <div class="review d-flex">
+                                            <div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+                                            <div class="desc">
+                                                <h4>
+                                                    <span class="text-left">Jacob Webb</span>
+                                                    <span class="text-right">14 March 2018</span>
+                                                </h4>
+                                                <p class="star">
+                                                    <span>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                    </span>
+                                                    <span class="text-right"><a href="#" class="reply"><i class="icon-reply"></i></a></span>
+                                                </p>
+                                                <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrov</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="rating-wrap">
+                                            <h3 class="head">Give a Review</h3>
+                                            <div class="wrap">
+                                                <p class="star">
+                                                    <span>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        (98%)
+                                                    </span>
+                                                    <span>20 Reviews</span>
+                                                </p>
+                                                <p class="star">
+                                                    <span>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        (85%)
+                                                    </span>
+                                                    <span>10 Reviews</span>
+                                                </p>
+                                                <p class="star">
+                                                    <span>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        (70%)
+                                                    </span>
+                                                    <span>5 Reviews</span>
+                                                </p>
+                                                <p class="star">
+                                                    <span>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        (10%)
+                                                    </span>
+                                                    <span>0 Reviews</span>
+                                                </p>
+                                                <p class="star">
+                                                    <span>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        <i class="ion-ios-star"></i>
+                                                        (0%)
+                                                    </span>
+                                                    <span>0 Reviews</span>
+                                                </p>
+                                            </div>
+                                        </div> !-->
+
                                     </div>
                                 </div>
                             </div>
                         </div>
+                         <div class="row text-center justify-content-center" style="color: black">
+                <button class="btn btn-info"><a href="" style="color: white;"> <i class="icon-phone"></i> Appeler l'annonceur-</a></button>---
+                <button class="btn btn-success"><a href="#" data-fancybox data-src="#hidden-content-reservation" href="javascript:;"></i>Reserver le bien</a></button>
+            </div>
+
                     </div>
                 </div>
             </div>
-            </section>
-            <section class="probootstrap-slider flexslider">
-    <div class="probootstrap-wrap-banner">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-10 col-md-offset-1">
+           
+        </div>
+        </section>
 
-            <div class="probootstrap-home-search probootstrap-animate">
-              <form action="" method="post">
-                <h2 class="heading">Rechercher votre nouvel habitat ici.</h2>
-                <div class="probootstrap-field-group">
-                  <div class="probootstrap-fields">
-                    
-                    <div class="search-field">
-                      <i class="icon-location2"></i>
-                      <input type="text" class="form-control" placeholder="Entrer une adresse">
-                    </div>
-                    <div class="search-category">
-                      <i class="icon-chevron-down"></i>
-                      <select name="#" id="" class="form-control">
-                        <option value="">A vendre</option>
-                        <option value="">A louer</option>
-                      </select>
-                    </div>
-                    <div class="search-category">
-                      <i class="icon-chevron-down"></i>
-                      <select name="#" id="" class="form-control">
-                        <option value="">Parcelle</option>
-                        <option value="">Maison</option>
-                        <option value="">Boutique</option>
-                        <option value="">Immeuble   </option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <button class="btn btn-success" type="submit"><i class="icon-magnifying-glass t2"></i> Rechercher</button>
-                </div>
-              </form>
-              <p class="mb0 text-center" ><small>Etes vous propriétaire d'une maison, d'une parcelle a vendre ou a louer ? <a href="{{ path('request')}}">Soumetter nous votre bien</a></small> </p>
-            </div>
-
+<section class="probootstrap-section probootstrap-section-lighter">
+<div class="container">
+  <div class="row heading">
+    <h2 class="mt0 mb50 text-center">Ressemble a ce que vous chercher</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-4 col-sm-6">
+      <div class="probootstrap-card probootstrap-listing">
+        <div class="probootstrap-card-media">
+          <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+          <a href="{{ path('request')}}" class="probootstrap-love"><i class="icon-heart"></i></a>
+        </div>
+        <div class="probootstrap-card-text">
+          <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+          <div class="probootstrap-listing-location">
+            <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
           </div>
+          <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+          <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+        </div>
+        <div class="probootstrap-card-extra">
+          <ul>
+            <li>
+              Superficie
+              <span>2400 m2</span>
+            </li>
+            <li>
+              Salon
+              <span>2</span>
+            </li>
+            <li>
+              Chambres
+              <span>3</span>
+            </li>
+            <li>
+              Garages
+              <span>1</span>
+            </li>
+          </ul>
         </div>
       </div>
+      <!-- END listing -->
     </div>
-    <ul class="slides">
-    <li style="background-image: url(front-end/img/architecture.jpg);" class="overlay"></li>
-    <li style="background-image: url(front-end/img/architecture-1836070.jpg);" class="overlay"></li>
-    <li style="background-image: url(front-end/img/bg.jpg);" class="overlay"></li>
-    <li style="background-image: url(front-end/img/bg-2.jpg);" class="overlay"></li>
-    </ul>
-  </section>
-  <!-- END: slider  -->
-
-  <section class="probootstrap-section probootstrap-section-lighter">
-    <div class="container">
-      <div class="row heading">
-        <h2 class="mt0 mb50 text-center">Et si c'étais ce que vous cherchiez ?</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-4 col-sm-6">
-          <div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="{{ path('request')}}" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
-              </div>
-              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
-              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Superficie
-                  <span>2400 m2</span>
-                </li>
-                <li>
-                  Salon
-                  <span>2</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>3</span>
-                </li>
-                <li>
-                  Garages
-                  <span>1</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- END listing -->
+    <div class="col-md-4 col-sm-6">
+      <div class="probootstrap-card probootstrap-listing">
+        <div class="probootstrap-card-media">
+          <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+          <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
-              </div>
-              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
-              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Superficie
-                  <span>2400 m2</span>
-                </li>
-                <li>
-                  Salon
-                  <span>2</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>3</span>
-                </li>
-                <li>
-                  Garages
-                  <span>1</span>
-                </li>
-              </ul>
-            </div>
+        <div class="probootstrap-card-text">
+          <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+          <div class="probootstrap-listing-location">
+            <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
           </div>
-          <!-- END listing -->
+          <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+          <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
         </div>
-        <div class="clearfix visible-sm-block"></div>
-        <div class="col-md-4 col-sm-6">
-          <div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture-1836070.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">1 Chambre 1 Salon</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Cotonou en face de la grande mosquée</span>
-              </div>
-              <div class="probootstrap-listing-category for-rent"><span>a louer</span></div>
-              <div class="probootstrap-listing-price"><strong>60 000  F CFA</strong> / mois</div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Sanitaire
-                  <span>Oui</span>
-                </li>
-                <li>
-                  Salon
-                  <span>1</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>1</span>
-                </li>
-                <li>
-                  Co-location
-                  <span>Non</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- END listing -->
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <<div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
-              </div>
-              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
-              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Superficie
-                  <span>2400 m2</span>
-                </li>
-                <li>
-                  Salon
-                  <span>2</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>3</span>
-                </li>
-                <li>
-                  Garages
-                  <span>1</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- END listing -->
-        </div>
-        <div class="clearfix visible-sm-block"></div>
-        <div class="col-md-4 col-sm-6">
-          <div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
-              </div>
-              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
-              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Superficie
-                  <span>2400 m2</span>
-                </li>
-                <li>
-                  Salon
-                  <span>2</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>3</span>
-                </li>
-                <li>
-                  Garages
-                  <span>1</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- END listing -->
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="probootstrap-card probootstrap-listing">
-            <div class="probootstrap-card-media">
-              <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
-              <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
-            </div>
-            <div class="probootstrap-card-text">
-              <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
-              <div class="probootstrap-listing-location">
-                <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
-              </div>
-              <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
-              <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
-            </div>
-            <div class="probootstrap-card-extra">
-              <ul>
-                <li>
-                  Superficie
-                  <span>2400 m2</span>
-                </li>
-                <li>
-                  Salon
-                  <span>2</span>
-                </li>
-                <li>
-                  Chambres
-                  <span>3</span>
-                </li>
-                <li>
-                  Garages
-                  <span>1</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- END listing -->
+        <div class="probootstrap-card-extra">
+          <ul>
+            <li>
+              Superficie
+              <span>2400 m2</span>
+            </li>
+            <li>
+              Salon
+              <span>2</span>
+            </li>
+            <li>
+              Chambres
+              <span>3</span>
+            </li>
+            <li>
+              Garages
+              <span>1</span>
+            </li>
+          </ul>
         </div>
       </div>
+      <!-- END listing -->
     </div>
-    <div class="container text-center " data-animate-effect="fadeIn">
-      <h2 class="heading">Sinon les meilleurs biens aux meilleurs prix vous attendent</h2>
-      <p class="sub-heading">Consultez notre catalogue de biens pour y voir tout ce que vous cherchez</p>
-      <p><a href="#" class="btn btn-success mb10">Voir le catalogue complet</a></p>
+    <div class="clearfix visible-sm-block"></div>
+    <div class="col-md-4 col-sm-6">
+      <div class="probootstrap-card probootstrap-listing">
+        <div class="probootstrap-card-media">
+          <img src="front-end/img/architecture-1836070.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+          <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
+        </div>
+        <div class="probootstrap-card-text">
+          <h2 class="probootstrap-card-heading"><a href="#">1 Chambre 1 Salon</a></h2>
+          <div class="probootstrap-listing-location">
+            <i class="icon-location2"></i> <span>Cotonou en face de la grande mosquée</span>
+          </div>
+          <div class="probootstrap-listing-category for-rent"><span>a louer</span></div>
+          <div class="probootstrap-listing-price"><strong>60 000  F CFA</strong> / mois</div>
+        </div>
+        <div class="probootstrap-card-extra">
+          <ul>
+            <li>
+              Sanitaire
+              <span>Oui</span>
+            </li>
+            <li>
+              Salon
+              <span>1</span>
+            </li>
+            <li>
+              Chambres
+              <span>1</span>
+            </li>
+            <li>
+              Co-location
+              <span>Non</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END listing -->
     </div>
-  </section>
+    <div class="col-md-4 col-sm-6">
+      <<div class="probootstrap-card probootstrap-listing">
+        <div class="probootstrap-card-media">
+          <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+          <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
+        </div>
+        <div class="probootstrap-card-text">
+          <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+          <div class="probootstrap-listing-location">
+            <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+          </div>
+          <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+          <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+        </div>
+        <div class="probootstrap-card-extra">
+          <ul>
+            <li>
+              Superficie
+              <span>2400 m2</span>
+            </li>
+            <li>
+              Salon
+              <span>2</span>
+            </li>
+            <li>
+              Chambres
+              <span>3</span>
+            </li>
+            <li>
+              Garages
+              <span>1</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END listing -->
+    </div>
+    <div class="clearfix visible-sm-block"></div>
+    <div class="col-md-4 col-sm-6">
+      <div class="probootstrap-card probootstrap-listing">
+        <div class="probootstrap-card-media">
+          <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+          <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
+        </div>
+        <div class="probootstrap-card-text">
+          <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+          <div class="probootstrap-listing-location">
+            <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+          </div>
+          <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+          <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+        </div>
+        <div class="probootstrap-card-extra">
+          <ul>
+            <li>
+              Superficie
+              <span>2400 m2</span>
+            </li>
+            <li>
+              Salon
+              <span>2</span>
+            </li>
+            <li>
+              Chambres
+              <span>3</span>
+            </li>
+            <li>
+              Garages
+              <span>1</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END listing -->
+    </div>
+    <div id="hidden-content-reservation">
+        {% for message in app.flashes('success') %}
+    <div class="succesflash" style="color: green;background-color: black;">
+      {{ message }}
+    </div>
+    {% endfor %}
+        {% if app.flashes('success') is empty %}
+        {{ form_start(form, {'attr': {'class': 'bg-light p-5 contact-form'}}) }}
+    <div class="form-group">
+      {{ form_widget(form.nom,{'attr': {'placeholder': 'Votre nom', 'class': 'form-control'}}) }}
+      <span class="error">{{ form_errors(form.nom) }}</span>
+    </div>
+    <div class="form-group">
+      {{ form_widget(form.prenom,{'attr': {'placeholder': 'Votre prenom', 'class': 'form-control'}}) }}
+      <span class="error">{{ form_errors(form.prenom) }}</span>
+    </div>
 
-        <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-        
-        
-        {% endblock %}
-        {% block script %}
-        {{ parent () }}
-        
-        <script src="front-end/view/js/jquery.min.js"></script>
-        <script src="front-end/view/js/jquery-migrate-3.0.1.min.js"></script>
-        <script src="front-end/view/js/popper.min.js"></script>
-        <script src="front-end/view/js/bootstrap.min.js"></script>
-        <script src="front-end/view/js/jquery.easing.1.3.js"></script>
-        <script src="front-end/view/js/jquery.waypoints.min.js"></script>
-        <script src="front-end/view/js/jquery.stellar.min.js"></script>
-        <script src="front-end/view/js/owl.carousel.min.js"></script>
-        <script src="front-end/view/js/jquery.magnific-popup.min.js"></script>
-        <script src="front-end/view/js/aos.js"></script>
-        <script src="front-end/view/js/jquery.animateNumber.min.js"></script>
-        <script src="front-end/view/js/bootstrap-datepicker.js"></script>
-        <script src="front-end/view/js/jquery.timepicker.min.js"></script>
-        <script src="front-end/view/js/scrollax.min.js"></script>
-        <script src="front-end/view/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-        <script src="front-end/view/js/google-map.js"></script>
-        <script src="front-end/view/js/main.js"></script>
+    <div class="form-group">
+      {{ form_widget(form.email,{'attr': {'placeholder': 'Votre email', 'class': 'form-control'}}) }}
+      <span class="error">{{ form_errors(form.email) }}</span>
+    </div>
+    <div class="form-group">
+      {{ form_widget(form.tel,{'attr': {'placeholder': 'Votre telephone', 'class': 'form-control'}}) }}
+      <span class="error">{{ form_errors(form.tel) }}</span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Réserver" class="btn btn-primary py-3 px-5">
+      </div>
+    {{ form_end(form) }}
+    {% endif %}
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="probootstrap-card probootstrap-listing">
+        <div class="probootstrap-card-media">
+          <img src="front-end/img/architecture.jpg" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+          <a href="#" class="probootstrap-love"><i class="icon-heart"></i></a>
+        </div>
+        <div class="probootstrap-card-text">
+          <h2 class="probootstrap-card-heading"><a href="#">Villa 3 chambres 2 salon a vendre</a></h2>
+          <div class="probootstrap-listing-location">
+            <i class="icon-location2"></i> <span>Parakou, quartier Albarifa 2 route de l'avenue</span>
+          </div>
+          <div class="probootstrap-listing-category for-sale"><span>a vendre</span></div>
+          <div class="probootstrap-listing-price"><strong> 135 000 000 F CFA</strong></div>
+        </div>
+        <div class="probootstrap-card-extra">
+          <ul>
+            <li>
+              Superficie
+              <span>2400 m2</span>
+            </li>
+            <li>
+              Salon
+              <span>2</span>
+            </li>
+            <li>
+              Chambres
+              <span>3</span>
+            </li>
+            <li>
+              Garages
+              <span>1</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END listing -->
+    </div>
+  </div>
+</div>
+<div class="container text-center " data-animate-effect="fadeIn">
+  <h2 class="heading">Sinon les meilleurs biens aux meilleurs prix vous attendent</h2>
+  <p class="sub-heading">Consultez notre catalogue de biens pour y voir tout ce que vous cherchez</p>
+  <p><a href="#" class="btn btn-success mb10">Voir le catalogue complet</a></p>
+</div>
+</section>
 
-       
-        {% endblock %}
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    
+    
+    {% endblock %}
+    {% block script %}
+    {{ parent () }}
+    
+    <script src="front-end/view/js/jquery.min.js"></script>
+    <script src="front-end/view/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="front-end/view/js/popper.min.js"></script>
+    <script src="front-end/view/js/bootstrap.min.js"></script>
+    <script src="front-end/view/js/jquery.easing.1.3.js"></script>
+    <script src="front-end/view/js/jquery.waypoints.min.js"></script>
+    <script src="front-end/view/js/jquery.stellar.min.js"></script>
+    <script src="front-end/view/js/owl.carousel.min.js"></script>
+    <script src="front-end/view/js/jquery.magnific-popup.min.js"></script>
+    <script src="front-end/view/js/aos.js"></script>
+    <script src="front-end/view/js/jquery.animateNumber.min.js"></script>
+    <script src="front-end/view/js/bootstrap-datepicker.js"></script>
+    <script src="front-end/view/js/jquery.timepicker.min.js"></script>
+    <script src="front-end/view/js/scrollax.min.js"></script>
+    <script src="front-end/view/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="front-end/view/js/google-map.js"></script>
+    <script src="front-end/view/js/main.js"></script>
+
+   
+    {% endblock %}
