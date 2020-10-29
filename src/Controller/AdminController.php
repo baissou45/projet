@@ -7,17 +7,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AdminController extends AbstractController
 {
-    /**
-     * @Route("/admin", name="admin")
-     */
-    public function index()
-    {
-        return $this->render('admin/index.html.twig', [
-            'controller_name' => 'AdminController',
-        ]);
     
-    }
-
     /**
      * @Route("/admin", name="admin")
      */
